@@ -1,1 +1,35 @@
 // Ferdinand 
+.sec-central  {
+    background-color: #EEF0F1;
+    
+    nav  {
+         background-color: #EEF0F1;  
+
+         .navbar-brand  {
+            font-weight:bolder;
+        }
+        
+        .navbar-toggler {
+            padding: 1rem 1.5rem;
+            font-size: 1.25rem;
+            border: solid 1px black;
+        }
+        
+        .navbar-light .navbar-toggler {
+            color: rgba(0,0,0,1.5);
+            border-color: rgba(0,0,0,0.2);
+        }      
+    }
+
+    .art-var  {
+        li  {
+            list-style: none;
+            margin-top: 20px;
+        }
+    }
+
+}
+
+
+
+

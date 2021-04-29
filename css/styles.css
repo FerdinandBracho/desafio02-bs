@@ -4,4 +4,36 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+body {
+  background-color: #EEF0F1;
+}
+
+.sec-central {
+  background-color: #EEF0F1;
+}
+
+.sec-central nav {
+  background-color: #EEF0F1;
+}
+
+.sec-central nav .navbar-brand {
+  font-weight: bolder;
+}
+
+.sec-central nav .navbar-toggler {
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
+  border: solid 1px black;
+}
+
+.sec-central nav .navbar-light .navbar-toggler {
+  color: black;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.sec-central .art-var li {
+  list-style: none;
+  margin-top: 20px;
+}
 /*# sourceMappingURL=styles.css.map */
