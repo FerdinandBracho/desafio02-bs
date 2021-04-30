@@ -24,6 +24,22 @@ div.collapse button.btn {
   width: 25%;
 }
 
+.dropdown > .dropdown-menu {
+  top: 200%;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+  top: 100%;
+}
+
+.dropdown > .dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+  pointer-events: none;
+}
+
 div.media {
   width: -webkit-fit-content;
   width: -moz-fit-content;
