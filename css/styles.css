@@ -9,6 +9,17 @@ body {
   background-color: #EEF0F1;
 }
 
+img {
+  display: block;
+  max-width: 15%;
+  height: auto;
+  border-radius: 50%;
+}
+
+li.nav-item {
+  list-style-type: none;
+}
+
 .sec-central {
   background-color: #EEF0F1;
 }

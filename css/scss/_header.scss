@@ -1,0 +1,11 @@
+img {
+    display: block;
+    max-width: 15%;
+    height: auto;
+    border-radius: 50%;
+  }
+
+li.nav-item {
+    list-style-type: none;
+    margin-right: ($spacer * .50) !important;
+}
