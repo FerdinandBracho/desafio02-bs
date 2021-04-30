@@ -25,7 +25,6 @@ div.collapse button.btn {
 }
 
 .dropdown > .dropdown-menu {
-  top: 200%;
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
 }
@@ -36,8 +35,13 @@ div.collapse button.btn {
 }
 
 .dropdown > .dropdown-toggle:active {
-  /*Without this, clicking will make it sticky*/
   pointer-events: none;
+}
+
+ul.navbar {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 div.media {
@@ -46,8 +50,10 @@ div.media {
   width: fit-content;
 }
 
-img.img-circle {
+img.profile {
   border-radius: 50%;
+  width: 10%;
+  height: 10%;
 }
 
 .left.col-md-3.col-lg-3.d-none.d-md-block .mb-6 .btn-light {

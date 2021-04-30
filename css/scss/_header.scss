@@ -26,7 +26,6 @@ div.collapse{
 // }
 
 .dropdown>.dropdown-menu {
-    top: 200%;
     transition: 0.3s all ease-in-out;
   }
   .dropdown:hover>.dropdown-menu {
@@ -35,15 +34,20 @@ div.collapse{
   }
   
   .dropdown>.dropdown-toggle:active {
-    /*Without this, clicking will make it sticky*/
       pointer-events: none;
   }
+  
+ul.navbar {
+    justify-content: space-between;
+}
 
 div.media{
     width: fit-content;
     
 }
-img.img-circle{
+img.profile{
         border-radius: 50%;
+        width: 10%;
+        height: 10%;
     
 }
