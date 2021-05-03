@@ -92,7 +92,7 @@ img.img-circle {
 }
 
 .left-post .react-post {
-  z-index: 2;
+  z-index: 10;
   position: fixed;
 }
 
