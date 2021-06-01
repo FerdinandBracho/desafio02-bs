@@ -71,10 +71,13 @@ a{
     .card-profile{
 
         border: none;
+        position: fixed;
+        top: 100px;
+
 
         .card-header {
             background-color: blueviolet;
-            height: 40px;
+            height: 40px;   
         }
 
         .profile-container{
