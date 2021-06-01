@@ -2,693 +2,676 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/df6ea92ceb.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./css/styles.css">
-  <title>Desafio 02 - Replica-Web(dev.to)</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/df6ea92ceb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Desafio 02 - Replica-Web(dev.to)</title>
 </head>
 
 <body>
 
-  <!-- Header Omar -->
-  <nav class="position-sticky sticky-top navbar navbar-expand-md navbar-light bg-light ">
-    <div class="container d-flex flex-nowrap justify-content-between">
-      <button class=" navbar-toggler mr-auto" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-        aria-label="Toggle navigation">
+    <!-- Header Omar -->
+    <nav class="position-sticky sticky-top navbar navbar-expand-md navbar-light bg-light ">
+        <div class="container-fluid  d-flex flex-nowrap justify-content-between">
+            <button class=" navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand bg-dark text-light p-2 mr-auto" href="index.html"><b>DEV</b></a>
-      <button class=" navbar-toggler mr-auto" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-        aria-label="Toggle navigation">
+            <a class="navbar-brand bg-dark text-light p-2 mr-auto" href="index.html"><b>DEV</b></a>
+            <button class=" navbar-toggler mr-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search"
           viewBox="0 0 16 16">
           <path
             d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
         </svg>
       </button>
-      <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
-        <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
-        <button class="btn btn-outline-primary bg-primary text-white" type="submit"><b>Write a post</b></button>
-      </div>
-      <div class="media">
-        <ul class="navbar-nav flex-row d-sm-flex me-auto mb-2 mb-sm-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-dots"
-                viewBox="0 0 16 16">
+            <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+                <input class=" form-control me-2 ml-4" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary bg-primary ml-auto text-white" type="submit"><b>Create a
+            Post</b></button>
+            </div>
+            <div class="media">
+                <ul class="navbar-nav flex-row d-sm-flex me-auto mb-2 mb-sm-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
                 <path
                   d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
                 <path
                   d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
               </svg>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bell"
-                viewBox="0 0 16 16">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
                 <path
                   d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
               </svg>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <img src="./assets/profile.jpg" class="img-circle" alt="Cinque Terre" width="32" height="32">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+                        </a>
+                    </li>
+                    <li class=" dropdown nav-item">
+                        <a class="nav-link btn " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="./assets/profile.jpg" class="img-circle" alt="Cinque Terre" width="32" height="32">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">User Name</a>
+                            <hr>
+                            <a class="dropdown-item" href="#">Dashboard</a>
+                            <a class="dropdown-item" href="#">Create a post</a>
+                            <a class="dropdown-item" href="#">Reading List</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <hr>
+                            <a class="dropdown-item" href="#">Sign Out </a>
+                        </div>
+                    </li>
+                </ul>
 
-  <main class="container-fluid ">
-    <div class="row p-3">
-      <div class="container ">
+            </div>
+        </div>
+    </nav>
 
-        <section class="row">
+    <main class="container-fluid ">
+        <div class="row p-3">
+            <div class="container ">
+
+                <section class="row">
 
 
-          <!-- Seccion Izquierda Rosy -->
+                    <!-- Seccion Izquierda Rosy -->
 
-          <section class=" left col-md-3 col-lg-3 d-none d-md-block ">
-            <nav class="mb-6">
-              <button type="button" class="btn btn-light col-12 d-flex justify-content-start align-items-center">
+                    <section class=" left col-md-3 col-lg-3 d-none d-md-block ">
+                        <nav class="mb-6">
+                            <button type="button" class="btn btn-light col-12 d-flex justify-content-start align-items-center">
                 <span><img src="./assets/ico_house.png" alt="house"></span> Home</button>
-              <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
+                            <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
                     src="./assets/ico_reading.png" alt="caja"></span>Reading List</button>
-              <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
+                            <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
                     src="./assets/ico_listings.png" alt="lista"></span>Listings</button>
-              <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
+                            <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
                     src="./assets/ico_poscast.png" alt="micro"></span>Podcasts</button>
-              <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
+                            <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
                     src="./assets/ico_videos.png" alt="video"></span>Videos</button>
-              <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
+                            <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
                     src="./assets/ico_tags.png" alt="tag"></span>Tags</button>
-              <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
+                            <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
                     src="./assets/ico_code.png" alt="pulgar"></span>Code of Conduct</button>
-              <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
+                            <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
                     src="./assets/ico_faq.png" alt="foco"></span>FAQ</button>
-              <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
+                            <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
                     src="./assets/ico_dev.png" alt="bolsas"></span>DEV
                 Shop</button>
-              <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
+                            <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
                     src="./assets/ico_sponsors.png" alt="corazon"></span>Sponsors</button>
-              <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
+                            <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
                     src="./assets/ico_about.png" alt="dev"></span>About</button>
-              <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
+                            <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
                     src="./assets/ico_privacy.png" alt="emoticon"></span>Privacy
                 Policy</button>
-              <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
+                            <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
                     src="./assets/ico_terms.png" alt="ojos"></span>Terms of use</button>
-              <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
+                            <button type="button" class="btn btn-light col-12 d-flex justify-content-start"><span><img
                     src="./assets/ico_contact.png" alt="contacto"></span>Contact</button>
-              <div>
-                <ul class="redes d-flex justify-content-around p-2 mt-4">
-                  <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            <div>
+                                <ul class="redes d-flex justify-content-around p-2 mt-4">
+                                    <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                         class="bi bi-twitter" viewBox="0 0 16 16">
                         <path
                           d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
                       </svg></a></li>
-                  <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                         class="bi bi-facebook" viewBox="0 0 16 16">
                         <path
                           d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
                       </svg></a></li>
-                  <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                         class="bi bi-github" viewBox="0 0 16 16">
                         <path
                           d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                       </svg></a></li>
-                  <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                         class="bi bi-instagram" viewBox="0 0 16 16">
                         <path
                           d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
                       </svg></a></li>
-                  <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                         class="bi bi-twitch" viewBox="0 0 16 16">
                         <path
                           d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z" />
                         <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z" />
                       </svg></a></li>
-                </ul>
-              </div>
-            </nav>
-            <nav class="tags-container mb-6">
-              <header class=" header-tags p-2 pr-0  d-flex justify-content-between">
-                <h3>My Tags</h3><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                </ul>
+                            </div>
+                        </nav>
+                        <nav class="tags-container mb-6">
+                            <header class=" header-tags p-2 pr-0  d-flex justify-content-between">
+                                <h3>My Tags</h3><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                     fill="currentColor" class="bi bi-nut" viewBox="0 0 16 16">
                     <path
                       d="m11.42 2 3.428 6-3.428 6H4.58L1.152 8 4.58 2h6.84zM4.58 1a1 1 0 0 0-.868.504l-3.428 6a1 1 0 0 0 0 .992l3.428 6A1 1 0 0 0 4.58 15h6.84a1 1 0 0 0 .868-.504l3.429-6a1 1 0 0 0 0-.992l-3.429-6A1 1 0 0 0 11.42 1H4.58z" />
                     <path
                       d="M6.848 5.933a2.5 2.5 0 1 0 2.5 4.33 2.5 2.5 0 0 0-2.5-4.33zm-1.78 3.915a3.5 3.5 0 1 1 6.061-3.5 3.5 3.5 0 0 1-6.062 3.5z" />
                   </svg></a>
-              </header>
-              <div class="tags overflow-auto mb-2">
-                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#javascript</button>
-                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#beginners</button>
-                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#python</button>
-                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#css</button>
-                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#devops</button>
-                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#android</button>
-                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#aws</button>
-                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#linux</button>
-                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#docker</button>
-                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#security</button>
-                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#git</button>
-              </div>
-            </nav>
-            <div class="container-stickers col-12">
-              <a href=""><img src="./assets/Sticker_Collage_2019_1024x1024.png" alt="stickers "></a>
-              <a href="">
-                <h2>Get Your Stickers!</h2>
-              </a>
-            </div>
-          </section>
+                            </header>
+                            <div class="tags overflow-auto mb-2">
+                                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#javascript</button>
+                                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#beginners</button>
+                                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#python</button>
+                                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#css</button>
+                                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#devops</button>
+                                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#android</button>
+                                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#aws</button>
+                                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#linux</button>
+                                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#docker</button>
+                                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#security</button>
+                                <button type="button" class="btn btn-light col-12 d-flex justify-content-start">#git</button>
+                            </div>
+                        </nav>
+                        <div class="container-stickers col-12">
+                            <a href=""><img src="./assets/Sticker_Collage_2019_1024x1024.png" alt="stickers "></a>
+                            <a href="">
+                                <h2>Get Your Stickers!</h2>
+                            </a>
+                        </div>
+                    </section>
 
-          <!-- Seccion Central Ferdi -->
-          <section class="sec-central col-12 col-md-9 col-lg-6">
-            <!-- Header -->
-            <nav class="navbar navbar-expand-md navbar-expand-lg">
-              <a class="navbar-brand" href="#">Posts</a>
-              <div class="collapse navbar-collapse  d-md-flex d-lg-flex justify-content-md-end justify-content-lg-end"
-                id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Feed</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Week</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Month</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Year</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Infinity</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Latest</a>
-                  </li>
-                </ul>
-              </div>
+                    <!-- Seccion Central Ferdi -->
+                    <section class="sec-central col-12 col-md-9 col-lg-6">
+                        <!-- Header -->
+                        <nav class="navbar navbar-expand-md navbar-expand-lg">
+                            <a class="navbar-brand" href="#">Posts</a>
+                            <div class="collapse navbar-collapse  d-md-flex d-lg-flex justify-content-md-end justify-content-lg-end" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Feed</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Week</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Month</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Year</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Infinity</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Latest</a>
+                                    </li>
+                                </ul>
+                            </div>
 
-              <!-- Lista desplegable en mobile -->
-              <div class="feed-btn">
-                <li class="nav-item dropdown">
-                  <a class="a-btn nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-                    data-toggle="dropdown" aria-expanded="false">
+                            <!-- Lista desplegable en mobile -->
+                            <div class="feed-btn">
+                                <li class="nav-item dropdown">
+                                    <a class="a-btn nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                     Feed
                   </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                    <li><a class="dropdown-item" href="#">Feed</a></li>
-                    <li><a class="dropdown-item" href="#">Week</a></li>
-                    <li><a class="dropdown-item" href="#">Month</a></li>
-                    <li><a class="dropdown-item" href="#">Year</a></li>
-                    <li><a class="dropdown-item" href="#">Infinity</a></li>
-                    <li><a class="dropdown-item" href="#">Lastest</a></li>
-                  </ul>
-              </div>
-            </nav>
-
-            <!-- Main article -->
-            <div class="main-art card">
-              <img src="https://picsum.photos/900/300" class="card-img-top" alt="main-post-img">
-
-              <div class="card-body f-flex flex-column">
-                <div class="post-info">
-
-                  <div class="avatar-info d-flex justify-content-start">
-                    <div>
-                      <img src="https://picsum.photos/400" alt="avatar">
-                    </div>
-                    <div>
-                      <p>Opeyemi Stephen 🚀</p>
-                      <p>Apr 29 (14 hours ago)</p>
-                    </div>
-                  </div>
-
-                  <div class="p-info">
-                    <div class="p-title flex-wrap">
-                      <a href="main-post.html">
-                        <h4>Let's talk about impostor syndrome<i class="fas fa-meteor text-warning"></i></h4>
-                      </a>
-
-
-                      <p>Hello folks! Welcome back 👋🏻 I trust you are doing well. As you probably figured from the
-                        title, today I'd like to
-                        talk about impostor syndrome. I know what you're thinking: "Ah, another one of these posts...
-                        Bye 🙄". Just hear me out
-                        before you leave. I promise I won't make it too long (at least not 30 minutes long).
-
-                        🚨 #1: Be warned; this one sounds like a rant. Not suitable for the faint at heart. Proceed at
-                        your own risk or hit the
-                        back button before you regret it.
-                        Brief intro ✍🏻
-                        I've been wanting to write about this topic for a while now, but I just couldn't find the words
-                        to approach this topic. . . . .</p>
-                    </div>
-
-                    <div class="p-hashtags flex-wrap">
-                      <a href="">#Beginner</a>
-                      <a href="" class="rounded bg-dark text-light">#Webdev</a>
-                      <a href="">#career</a>
-                      <a href="">#JavaScrip</a>
-                      <a class="bg-danger rounded" href="">#Productivity</a>
-                    </div>
-
-                    <div class="p-engage d-flex justify-content-between">
-                      <div>
-                        <div class="p-likes-c text-primary">
-                          <i class="fas fa-heart-broken"> 7</i>
-                          <i class="far fa-comment"> 2</i>
-                        </div>
-
-                      </div>
-
-                      <div class="read-save">
-                        <small>4 min read</small>
-
-                        <button type="button">Save</button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Articles various -->
-            <ul class=art-var>
-              <li>
-                <div class="card">
-                  <div class="card-body f-flex flex-column">
-                    <div class="post-info">
-
-                      <div class="avatar-info d-flex justify-content-start">
-                        <div>
-                          <img src="https://picsum.photos/200" alt="avatar">
-                        </div>
-                        <div>
-                          <p>Andrew Baisden <i class="fas fa-code text-info"> </i>
-                          <p>Mar 26</p>
-                        </div>
-                      </div>
-
-                      <div class="p-info">
-                        <div class="p-title flex-wrap">
-                          <a href="post2.html">
-                            <h4>A beginner’s journey into software development in Nigeria <i
-                                class="far fa-hand-spock"></i></h4>
-                          </a>
-                        </div>
-
-                        <div class="rounded p-hashtags flex-wrap">
-                          <a class="rounded bg-info" href="">#mentalhealth</a>
-                          <a class="rounded " href="">#watercooler</a>
-                          <a class="rounded bg-dark text-light" href="">#discuss</a>
-                          <a class="rounded .text-info" href="">#motivation</a>
-                        </div>
-
-                        <div class="p-engage d-flex justify-content-between">
-                          <div>
-                            <div class="p-likes-c text-primary">
-                              <i class="fas fa-heart-broken"> 12</i>
-                              <i class="far fa-comment"> 3</i>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                        <li><a class="dropdown-item" href="#">Feed</a></li>
+                                        <li><a class="dropdown-item" href="#">Week</a></li>
+                                        <li><a class="dropdown-item" href="#">Month</a></li>
+                                        <li><a class="dropdown-item" href="#">Year</a></li>
+                                        <li><a class="dropdown-item" href="#">Infinity</a></li>
+                                        <li><a class="dropdown-item" href="#">Lastest</a></li>
+                                    </ul>
                             </div>
+                        </nav>
 
-                          </div>
+                        <!-- Main article -->
+                        <div class="main-art card">
+                            <img src="https://picsum.photos/900/300" class="card-img-top" alt="main-post-img">
 
-                          <div class="read-save">
-                            <small>7 min read</small>
+                            <div class="card-body f-flex flex-column">
+                                <div class="post-info">
 
-                            <button type="button">Save</button>
-                          </div>
+                                    <div class="avatar-info d-flex justify-content-start">
+                                        <div>
+                                            <img src="https://picsum.photos/400" alt="avatar">
+                                        </div>
+                                        <div>
+                                            <p>Opeyemi Stephen 🚀</p>
+                                            <p>Apr 29 (14 hours ago)</p>
+                                        </div>
+                                    </div>
 
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
+                                    <div class="p-info">
+                                        <div class="p-title flex-wrap">
+                                            <a href="main-post.html">
+                                                <h4>Let's talk about impostor syndrome<i class="fas fa-meteor text-warning"></i></h4>
+                                            </a>
 
-              <li>
-                <div class="card">
-                  <div class="card-body f-flex flex-column">
-                    <div class="post-info">
 
-                      <div class="avatar-info d-flex justify-content-start">
-                        <div>
-                          <img src="https://picsum.photos/250" alt="avatar">
-                        </div>
-                        <div>
-                          <p>Amelia Vieira Rosado 🐤🥇</p>
-                          <p>Apr 29 (19 hours ago)</p>
-                        </div>
-                      </div>
-                      <div class="p-info">
-                        <div class="p-title flex-wrap">
-                          <h4> 50 Cool Web And Mobile Project Ideas for 2021</h4>
-                        </div>
+                                            <p>Hello folks! Welcome back 👋🏻 I trust you are doing well. As you probably figured from the title, today I'd like to talk about impostor syndrome. I know what you're thinking: "Ah, another one of these posts...
+                                                Bye 🙄". Just hear me out before you leave. I promise I won't make it too long (at least not 30 minutes long). 🚨 #1: Be warned; this one sounds like a rant. Not suitable for the faint at heart. Proceed
+                                                at your own risk or hit the back button before you regret it. Brief intro ✍🏻 I've been wanting to write about this topic for a while now, but I just couldn't find the words to approach this topic. . . .
+                                                .</p>
+                                        </div>
 
-                        <div class="p-hashtags flex-wrap">
-                          <a href="">#react</a>
-                          <a href="">#Webdev</a>
-                          <a href="">#career</a>
-                          <a href="">#JavaScrip</a>
-                        </div>
+                                        <div class="p-hashtags flex-wrap">
+                                            <a href="">#Beginner</a>
+                                            <a href="" class="rounded bg-dark text-light">#Webdev</a>
+                                            <a href="">#career</a>
+                                            <a href="">#JavaScrip</a>
+                                            <a class="bg-danger rounded" href="">#Productivity</a>
+                                        </div>
 
-                        <div class="p-engage d-flex justify-content-between">
-                          <div>
-                            <div class="p-likes-c text-primary">
-                              <i class="fas fa-heart-broken"> 6</i>
-                              <i class="far fa-comment"> 16</i>
+                                        <div class="p-engage d-flex justify-content-between">
+                                            <div>
+                                                <div class="p-likes-c text-primary">
+                                                    <i class="fas fa-heart-broken"> 7</i>
+                                                    <i class="far fa-comment"> 2</i>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="read-save">
+                                                <small>4 min read</small>
+
+                                                <button type="button">Save</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
-                          </div>
-
-                          <div class="read-save">
-                            <small>9 min read</small>
-
-                            <button type="button">Save</button>
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </li>
-
-              <li>
-                <div class="card">
-                  <div class="card-body f-flex flex-column">
-                    <div class="post-info">
-
-                      <div class="avatar-info d-flex justify-content-start">
-                        <div>
-                          <img src="https://picsum.photos/300" alt="avatar">
-                        </div>
-                        <div>
-                          <p>Zeil Liw</p>
-                          <p>Jan 18</p>
-                        </div>
-                      </div>
-
-                      <div class="p-info">
-                        <div class="p-title flex-wrap">
-                          <h4>Prettier and Standard in VSCode🐙</h4>
                         </div>
 
-                        <div class="p-hashtags flex-wrap">
-                          <a href="">#tools</a>
-                          <a class="bg-dark text-info rounded" href="">#vscode</a>
-                          <a href="">#writting</a>
-                        </div>
+                        <!-- Articles various -->
+                        <ul class=art-var>
+                            <li>
+                                <div class="card">
+                                    <div class="card-body f-flex flex-column">
+                                        <div class="post-info">
 
-                        <div class="p-engage d-flex justify-content-between">
-                          <div>
-                            <div class="p-likes-c text-primary">
-                              <i class="fas fa-heart-broken"> 17</i>
-                              <i class="far fa-comment"> 26</i>
-                            </div>
+                                            <div class="avatar-info d-flex justify-content-start">
+                                                <div>
+                                                    <img src="https://picsum.photos/200" alt="avatar">
+                                                </div>
+                                                <div>
+                                                    <p>Andrew Baisden <i class="fas fa-code text-info"> </i>
+                                                        <p>Mar 26</p>
+                                                </div>
+                                            </div>
 
-                          </div>
+                                            <div class="p-info">
+                                                <div class="p-title flex-wrap">
+                                                    <a href="post2.html">
+                                                        <h4>A beginner’s journey into software development in Nigeria <i class="far fa-hand-spock"></i></h4>
+                                                    </a>
+                                                </div>
 
-                          <div class="read-save">
-                            <small>11 min read</small>
+                                                <div class="rounded p-hashtags flex-wrap">
+                                                    <a class="rounded bg-info" href="">#mentalhealth</a>
+                                                    <a class="rounded " href="">#watercooler</a>
+                                                    <a class="rounded bg-dark text-light" href="">#discuss</a>
+                                                    <a class="rounded .text-info" href="">#motivation</a>
+                                                </div>
 
-                            <button type="button">Save</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </li>
+                                                <div class="p-engage d-flex justify-content-between">
+                                                    <div>
+                                                        <div class="p-likes-c text-primary">
+                                                            <i class="fas fa-heart-broken"> 12</i>
+                                                            <i class="far fa-comment"> 3</i>
+                                                        </div>
 
-              <li>
-                <div class="card">
-                  <div class="card-body f-flex flex-column">
-                    <div class="post-info">
+                                                    </div>
 
-                      <div class="avatar-info d-flex justify-content-start">
-                        <div>
-                          <img src="https://picsum.photos/350" alt="avatar">
-                        </div>
-                        <div>
-                          <p>Madza <i class="fas fa-code-branch"></i></p>
-                          <p>Apr 27</p>
-                        </div>
-                      </div>
+                                                    <div class="read-save">
+                                                        <small>7 min read</small>
 
-                      <div class="p-info">
-                        <div class="p-title flex-wrap">
-                          <h4>What Advice Would You Give to Your Younger Self?</h4>
-                        </div>
+                                                        <button type="button">Save</button>
+                                                    </div>
 
-                        <!-- #career #productivity #100daysofcode #beginners -->
-                        <div class="p-hashtags flex-wrap">
-                          <a class="rounded text-warning " href="">#Beginner</a>
-                          <a class="rounded" href="">#career</a>
-                          <a class="rounded bg-success" href="">#100daysofcode</a>
-                          <a class="rounded bg-success text-warning" href="">#Productivity</a>
-                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
 
-                        <div class="p-engage d-flex justify-content-between">
-                          <div>
-                            <div class="p-likes-c text-primary">
-                              <i class="fas fa-heart-broken"> 7</i>
-                              <i class="far fa-comment"> 13</i>
-                            </div>
+                            <li>
+                                <div class="card">
+                                    <div class="card-body f-flex flex-column">
+                                        <div class="post-info">
 
-                          </div>
+                                            <div class="avatar-info d-flex justify-content-start">
+                                                <div>
+                                                    <img src="https://picsum.photos/250" alt="avatar">
+                                                </div>
+                                                <div>
+                                                    <p>Amelia Vieira Rosado 🐤🥇</p>
+                                                    <p>Apr 29 (19 hours ago)</p>
+                                                </div>
+                                            </div>
+                                            <div class="p-info">
+                                                <div class="p-title flex-wrap">
+                                                    <h4> 50 Cool Web And Mobile Project Ideas for 2021</h4>
+                                                </div>
 
-                          <div class="read-save">
-                            <small>8 min read</small>
+                                                <div class="p-hashtags flex-wrap">
+                                                    <a href="">#react</a>
+                                                    <a href="">#Webdev</a>
+                                                    <a href="">#career</a>
+                                                    <a href="">#JavaScrip</a>
+                                                </div>
 
-                            <button type="button">Save</button>
-                          </div>
+                                                <div class="p-engage d-flex justify-content-between">
+                                                    <div>
+                                                        <div class="p-likes-c text-primary">
+                                                            <i class="fas fa-heart-broken"> 6</i>
+                                                            <i class="far fa-comment"> 16</i>
+                                                        </div>
 
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </li>
-            </ul>
-          </section>
+                                                    </div>
+
+                                                    <div class="read-save">
+                                                        <small>9 min read</small>
+
+                                                        <button type="button">Save</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </li>
+
+                            <li>
+                                <div class="card">
+                                    <div class="card-body f-flex flex-column">
+                                        <div class="post-info">
+
+                                            <div class="avatar-info d-flex justify-content-start">
+                                                <div>
+                                                    <img src="https://picsum.photos/300" alt="avatar">
+                                                </div>
+                                                <div>
+                                                    <p>Zeil Liw</p>
+                                                    <p>Jan 18</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="p-info">
+                                                <div class="p-title flex-wrap">
+                                                    <h4>Prettier and Standard in VSCode🐙</h4>
+                                                </div>
+
+                                                <div class="p-hashtags flex-wrap">
+                                                    <a href="">#tools</a>
+                                                    <a class="bg-dark text-info rounded" href="">#vscode</a>
+                                                    <a href="">#writting</a>
+                                                </div>
+
+                                                <div class="p-engage d-flex justify-content-between">
+                                                    <div>
+                                                        <div class="p-likes-c text-primary">
+                                                            <i class="fas fa-heart-broken"> 17</i>
+                                                            <i class="far fa-comment"> 26</i>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="read-save">
+                                                        <small>11 min read</small>
+
+                                                        <button type="button">Save</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </li>
+
+                            <li>
+                                <div class="card">
+                                    <div class="card-body f-flex flex-column">
+                                        <div class="post-info">
+
+                                            <div class="avatar-info d-flex justify-content-start">
+                                                <div>
+                                                    <img src="https://picsum.photos/350" alt="avatar">
+                                                </div>
+                                                <div>
+                                                    <p>Madza <i class="fas fa-code-branch"></i></p>
+                                                    <p>Apr 27</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="p-info">
+                                                <div class="p-title flex-wrap">
+                                                    <h4>What Advice Would You Give to Your Younger Self?</h4>
+                                                </div>
+
+                                                <!-- #career #productivity #100daysofcode #beginners -->
+                                                <div class="p-hashtags flex-wrap">
+                                                    <a class="rounded text-warning " href="">#Beginner</a>
+                                                    <a class="rounded" href="">#career</a>
+                                                    <a class="rounded bg-success" href="">#100daysofcode</a>
+                                                    <a class="rounded bg-success text-warning" href="">#Productivity</a>
+                                                </div>
+
+                                                <div class="p-engage d-flex justify-content-between">
+                                                    <div>
+                                                        <div class="p-likes-c text-primary">
+                                                            <i class="fas fa-heart-broken"> 7</i>
+                                                            <i class="far fa-comment"> 13</i>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="read-save">
+                                                        <small>8 min read</small>
+
+                                                        <button type="button">Save</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </li>
+                        </ul>
+                    </section>
 
 
-          <!-- Seccion Derecha Yair
+                    <!-- Seccion Derecha Yair
            col-sm-12 col-md-10 offset-md-2 offset-lg-0
            -->
 
-          <section class="d-none d-lg-block col-lg-3">
+                    <section class="d-none d-lg-block col-lg-3">
 
-            <!--Cards Container-->
-            <section class="section-right-container">
+                        <!--Cards Container-->
+                        <section class="section-right-container">
 
 
-              <!--Card Listings-->
+                            <!--Card Listings-->
 
-              <div class=" card">
-                <div class="card-header d-lg-flex justify-content-between">
-                  <h4>Listings</h4>
-                  <div>
-                    <a href="">See All...</a>
-                  </div>
+                            <div class=" card">
+                                <div class="card-header d-lg-flex justify-content-between">
+                                    <h4>Listings</h4>
+                                    <div>
+                                        <a href="">See All...</a>
+                                    </div>
+                                </div>
+                                <div class="list-group list-group-flush">
+                                    <a href="" class="list-group-item btn btn-light">
+                                        <div class="subcard-content">Looking for a FullStack Developer role - Part Time / job/ Intern</div>
+                                        <span class="mini-tag">Jobs</span>
+                                    </a>
+                                    <a href="" class="list-group-item btn btn-light">
+                                        <div class="subcard-content">Podcast - The evolution of DevOps in 2021 puts automation at the center
+                                        </div>
+                                        <span class="mini-tag">misc</span>
+                                    </a>
+                                    <a href="" class="list-group-item btn btn-light">
+                                        <div class="subcard-content">🍜 Win a year’s worth of ramen 🍜 and a US$500 Amazon gift card by simply encrypting data using the Ubiq Platform!</div>
+                                        <span class="mini-tag">collabs</span>
+                                    </a>
+                                    <a href="" class="list-group-item btn btn-light">
+                                        <div class="subcard-content">Best Resource to Easily Master Modern JavaScript Skills</div>
+                                        <span class="mini-tag">education</span>
+                                    </a>
+                                    <a href="" class="list-group-item btn btn-light">
+                                        <div class="subcard-content">Dublin Maker Festival 2021 Open Call</div>
+                                        <span class="mini-tag">misc</span>
+                                    </a>
+                                    <a href="" class="list-group-item btn btn-light">
+                                        <div class="mini-footer font-weight-bold">Card Footer</div>
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            <!--Card NEWS !! -->
+
+                            <div class=" card">
+                                <div class="card-header d-lg-flex justify-content-between">
+                                    <h4>#news</h4>
+                                </div>
+                                <div class="list-group list-group-flush">
+                                    <a href="" class="list-group-item btn btn-light">
+                                        <div class="subcard-content">Basecamp Backlash, Remote Work Increasing Harassment, Linux Kernel Submission Ban, & more on DevNews!</div>
+                                        <div class="mini-tag">1 comments</div>
+                                    </a>
+                                    <a href="" class="list-group-item btn btn-light">
+                                        <div class="subcard-content">PHP 8.1 On New Heights With Amazing New Additions 🎉
+                                        </div>
+                                        <div class="mini-tag-btn">New</div>
+                                    </a>
+                                    <a href="" class="list-group-item btn btn-light">
+                                        <div class="subcard-content">JavaScript News and Updates of April 2021</div>
+                                        <div class="mini-tag-btn">New</div>
+                                    </a>
+                                    <a href="" class="list-group-item btn btn-light">
+                                        <div class="subcard-content">Redux-Cool Philosophy</div>
+                                        <div class="mini-tag-btn">New</div>
+                                    </a>
+                                    <a href="" class="list-group-item btn btn-light">
+                                        <div class="subcard-content">A guide to measuring Core Web Vitals, Cloudflare Pages, and what's new in Chrome 91 | Front End News #027</div>
+                                        <div class="mini-tag-btn">New</div>
+                                    </a>
+                                    <a href="" class="list-group-item btn btn-light">
+                                        <div class="subcard-content">Content Description around here</div>
+                                        <div class="mini-tag-btn">New</div>
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            <!--Card HELP !! -->
+
+                            <div class=" card">
+                                <div class="card-header d-lg-flex justify-content-between">
+                                    <h4>#help</h4>
+                                </div>
+                                <div class="list-group list-group-flush">
+                                    <a href="" class="list-group-item btn btn-light">
+                                        <div class="subcard-content">Content Description around here</div>
+                                        <div class="mini-tag-btn">New</div>
+                                    </a>
+                                    <a href="" class="list-group-item btn btn-light">
+                                        <div class="subcard-content">Content Description around here</div>
+                                        <span class="mini-tag">Mini-Tag</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </section>
+
+                    </section>
+
+                </section>
                 </div>
-                <div class="list-group list-group-flush">
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">Looking for a FullStack Developer role - Part Time / job/ Intern</div>
-                    <span class="mini-tag">Jobs</span>
-                  </a>
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">Podcast - The evolution of DevOps in 2021 puts automation at the center
-                    </div>
-                    <span class="mini-tag">misc</span>
-                  </a>
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">🍜 Win a year’s worth of ramen 🍜 and a US$500 Amazon gift card by
-                      simply encrypting data using the Ubiq Platform!</div>
-                    <span class="mini-tag">collabs</span>
-                  </a>
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">Best Resource to Easily Master Modern JavaScript Skills</div>
-                    <span class="mini-tag">education</span>
-                  </a>
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">Dublin Maker Festival 2021 Open Call</div>
-                    <span class="mini-tag">misc</span>
-                  </a>
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="mini-footer font-weight-bold">Card Footer</div>
-                  </a>
                 </div>
-              </div>
+    </main>
 
+    <!-- Seccion footer -->
 
-              <!--Card NEWS !! -->
-
-              <div class=" card">
-                <div class="card-header d-lg-flex justify-content-between">
-                  <h4>#news</h4>
-                </div>
-                <div class="list-group list-group-flush">
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">Basecamp Backlash, Remote Work Increasing Harassment, Linux Kernel
-                      Submission Ban, & more on DevNews!</div>
-                    <div class="mini-tag">1 comments</div>
-                  </a>
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">PHP 8.1 On New Heights With Amazing New Additions
-                      🎉</div>
-                    <div class="mini-tag-btn">New</div>
-                  </a>
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">JavaScript News and Updates of April 2021</div>
-                    <div class="mini-tag-btn">New</div>
-                  </a>
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">Redux-Cool Philosophy</div>
-                    <div class="mini-tag-btn">New</div>
-                  </a>
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">A guide to measuring Core Web Vitals, Cloudflare Pages, and what's new
-                      in Chrome 91 | Front End News #027</div>
-                    <div class="mini-tag-btn">New</div>
-                  </a>
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">Content Description around here</div>
-                    <div class="mini-tag-btn">New</div>
-                  </a>
-                </div>
-              </div>
-
-
-              <!--Card HELP !! -->
-
-              <div class=" card">
-                <div class="card-header d-lg-flex justify-content-between">
-                  <h4>#help</h4>
-                </div>
-                <div class="list-group list-group-flush">
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">Content Description around here</div>
-                    <div class="mini-tag-btn">New</div>
-                  </a>
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">Content Description around here</div>
-                    <span class="mini-tag">Mini-Tag</span>
-                  </a>
-                </div>
-              </div>
-
-            </section>
-
-          </section>
-
-        </section>
-      </div>
-    </div>
-  </main>
-
-  <!-- Seccion footer -->
-
-  <footer class="footer-container container-fluid  ">
-    <div class="row">
-      <div class="footer container col-lg-7 col-sm-12 ">
-        <nav class="footer-nv d-flex justify-content-center flex-wrap flex-column">
-          <ul class="lista d-flex  flex-wrap justify-content-center">
-            <li class=" p-2"> <a href="">Home </a> </li>
-            <li class="p-2"> <a href="">Reading List </a> </li>
-            <li class="p-2"> <a href="">Listings </a> </li>
-            <li class="p-2"> <a href="">Podcasts </a> </li>
-            <li class="p-2"> <a href="">Videos </a> </li>
-            <li class="p-2"> <a href="">Tags </a> </li>
-            <li class="p-2"> <a href="">Code of Conduct </a> </li>
-            <li class="p-2"> <a href="">FaQ </a> </li>
-            <li class="p-2"> <a href="">DEV Shop </a> </li>
-            <li class="p-2"> <a href="">Sponsor </a> </li>
-            <li class="p-2"> <a href="">About </a> </li>
-            <li class="p-2"> <a href="">Privacy Policy </a> </li>
-            <li class="p-2"> <a href="">Terms of use </a> </li>
-            <li class="p-2"> <a href="">Contact </a> </li>
-            <li class="p-2"> <a href=""><strong>Write a post</strong> </a> </li>
-          </ul>
-          <div class="pt-2">
-            <ul class="redes d-flex justify-content-center p-2 mt-1">
-              <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+    <footer class="footer-container container-fluid  ">
+        <div class="row">
+            <div class="footer container col-lg-7 col-sm-12 ">
+                <nav class="footer-nv d-flex justify-content-center flex-wrap flex-column">
+                    <ul class="lista d-flex  flex-wrap justify-content-center">
+                        <li class=" p-2"> <a href="">Home </a> </li>
+                        <li class="p-2"> <a href="">Reading List </a> </li>
+                        <li class="p-2"> <a href="">Listings </a> </li>
+                        <li class="p-2"> <a href="">Podcasts </a> </li>
+                        <li class="p-2"> <a href="">Videos </a> </li>
+                        <li class="p-2"> <a href="">Tags </a> </li>
+                        <li class="p-2"> <a href="">Code of Conduct </a> </li>
+                        <li class="p-2"> <a href="">FaQ </a> </li>
+                        <li class="p-2"> <a href="">DEV Shop </a> </li>
+                        <li class="p-2"> <a href="">Sponsor </a> </li>
+                        <li class="p-2"> <a href="">About </a> </li>
+                        <li class="p-2"> <a href="">Privacy Policy </a> </li>
+                        <li class="p-2"> <a href="">Terms of use </a> </li>
+                        <li class="p-2"> <a href="">Contact </a> </li>
+                        <li class="p-2"> <a href=""><strong>Write a post</strong> </a> </li>
+                    </ul>
+                    <div class="pt-2">
+                        <ul class="redes d-flex justify-content-center p-2 mt-1">
+                            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-twitter mx-2" viewBox="0 0 16 16">
                     <path
                       d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
                   </svg></a></li>
-              <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-facebook mx-2" viewBox="0 0 16 16">
                     <path
                       d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
                   </svg></a></li>
-              <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-github mx-2" viewBox="0 0 16 16">
                     <path
                       d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                   </svg></a></li>
-              <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-instagram mx-2" viewBox="0 0 16 16">
                     <path
                       d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
                   </svg></a></li>
-              <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-twitch mx-2" viewBox="0 0 16 16">
                     <path
                       d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z" />
                     <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z" />
                   </svg></a></li>
-            </ul>
-          </div>
-          <hr>
-          <p><a href="">DEV Community</a> – A constructive and inclusive social network for software developers. With
-            you
-            every step of your journey.</p>
-          <div class="mb-1">
-            <p>Built on <a href=""><strong>Forem</strong></a> -the <a href=""><strong>open source</strong></a> software
-              that powers <a href=""><strong>DEV</strong></a> and other inclusive communities.</p>
-            <p>Made with love and <a href=""><strong>Ruby on Rails</strong></a> DEV Community © 2016 - 2021. </p>
-            <div>
-              <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        </ul>
+                    </div>
+                    <hr>
+                    <p><a href="">DEV Community</a> – A constructive and inclusive social network for software developers. With you every step of your journey.</p>
+                    <div class="mb-1">
+                        <p>Built on <a href=""><strong>Forem</strong></a> -the <a href=""><strong>open source</strong></a> software that powers <a href=""><strong>DEV</strong></a> and other inclusive communities.</p>
+                        <p>Made with love and <a href=""><strong>Ruby on Rails</strong></a> DEV Community © 2016 - 2021. </p>
+                        <div>
+                            <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                   class="fas fa-seedling" viewBox="0 0 512 512">
                   <path
                     d="M64 96H0c0 123.7 100.3 224 224 224v144c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V320C288 196.3 187.7 96 64 96zm384-64c-84.2 0-157.4 46.5-195.7 115.2 27.7 30.2 48.2 66.9 59 107.6C424 243.1 512 147.9 512 32h-64z" />
                 </svg></a>
+                        </div>
+                    </div>
+                </nav>
             </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-    <div class="pet">
-      <img src="./assets/wmv3mtusjwb3r13d5h2f.png" alt="pet">
-    </div>
-  </footer>
+        </div>
+        <div class="pet">
+            <img src="./assets/wmv3mtusjwb3r13d5h2f.png" alt="pet">
+        </div>
+    </footer>
 
 
 
 
 
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 </body>
 
 </html>
