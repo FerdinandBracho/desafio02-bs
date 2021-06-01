@@ -1,23 +1,31 @@
-
-
-
-
-
-div.collapse{
-        justify-content: space-between;
-    input.form-control{
-        width: 40%;
-    }
-    button.btn{
-        width: 25%;
-    }
-}    
-    
-div.media{
-    width: fit-content;
-    
+nav {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    ;
 }
-img.img-circle{
-        border-radius: 50%;
-    
+
+.bg-dark {
+    border-radius: 3px;
+    height: 40px;
+}
+
+div.collapse {
+    justify-content: space-around;
+    input.form-control {
+        max-width: 420px;
+        height: 40px
+    }
+    button.btn {
+        width: 15%;
+    }
+}
+
+div.media {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    justify-content: space-evenly;
+}
+
+img.img-circle {
+    border-radius: 50%;
 }
