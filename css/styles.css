@@ -94,6 +94,7 @@ img.img-circle {
 .left-post .react-post {
   z-index: 10;
   position: fixed;
+  width: 100vw;
 }
 
 .left-post .react-post .d-flex li {
@@ -141,7 +142,7 @@ img.img-circle {
   border-radius: 50%;
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 567px) {
   .left-post .react-post {
     position: fixed;
     bottom: 0px;
@@ -151,6 +152,14 @@ img.img-circle {
             align-items: center;
     background-color: #eef0f1;
     width: 100vw;
+  }
+}
+
+@media only screen and (min-width: 567px) {
+  .left-post .react-post {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
 }
 
@@ -429,6 +438,10 @@ img.img-circle {
 /* Inicio sección Derecha Yair
 ----------------------------------------------------------
 */
+a {
+  text-decoration: none;
+}
+
 .section-right-container .card {
   margin-bottom: 40px;
 }
@@ -446,15 +459,19 @@ img.img-circle {
 .section-right-container .card .list-group .subcard-content, .section-right-container .card .list-group .mini-tag, .section-right-container .card .list-group .mini-tag-btn {
   font-size: 11px;
   text-align: initial;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
-.section-right-container .card .list-group .mini-tag {
-  color: gray;
+.section-right-container .card .list-group .list-group-item {
+  text-align: left;
+}
+
+.section-right-container .card .list-group .list-group-item .mini-tag {
+  color: #808080;
   border-color: blue;
 }
 
-.section-right-container .card .list-group .mini-tag-btn {
+.section-right-container .card .list-group .list-group-item .mini-tag-btn {
   background-color: blue;
   border: 1px solid blue;
   border-radius: 5px;
@@ -474,6 +491,78 @@ img.img-circle {
 
 .section-right-container .card .btn:hover .subcard-content, .section-right-container .card .btn:hover .mini-footer {
   color: blue;
+}
+
+.section-right-container .card-profile {
+  border: none;
+}
+
+.section-right-container .card-profile .card-header {
+  background-color: blueviolet;
+  height: 40px;
+}
+
+.section-right-container .card-profile .profile-container {
+  position: relative;
+  height: 40px;
+}
+
+.section-right-container .card-profile .profile-container .profile-pos {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  z-index: 1;
+  width: 85%;
+  border: none;
+}
+
+.section-right-container .card-profile .profile-container .profile-pos .profile-array {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.section-right-container .card-profile .profile-container .profile-pos .profile-array .img-profile {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.section-right-container .card-profile .profile-container .profile-pos .profile-array .name-profile p {
+  margin-bottom: 0px;
+}
+
+.section-right-container .card-profile .profile-container .profile-pos .profile-array .name-profile a {
+  color: black;
+  text-decoration: none;
+}
+
+.section-right-container .card-profile .profile-container .profile-pos .profile-array .name-profile a:hover {
+  color: blue;
+  text-decoration: none;
+}
+
+.section-right-container .card-profile .profile-container .profile-pos .profile-array div p {
+  margin-left: 20px;
+}
+
+.section-right-container .card-profile .list-group .list-group-item {
+  border: none;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 10px;
+}
+
+.section-right-container .card-profile .list-group .list-group-item .btn-primary {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.section-right-container .card-profile .list-group .list-group-item .btn-primary:hover {
+  background-color: navy;
 }
 
 /* Final sección Derecha Yair

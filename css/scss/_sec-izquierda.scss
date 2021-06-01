@@ -76,7 +76,7 @@
   .react-post {
     z-index: 10;
     position: fixed;
-
+    width: 100vw;
     .d-flex {
 
 
@@ -139,7 +139,8 @@
   }
 }
 
-@media only screen and (max-width:360px) {
+
+@media only screen and (max-width:567px) {
   .left-post {
     .react-post {
       position: fixed;
@@ -150,7 +151,13 @@
       width: 100vw;
 
     }
+  }
+}
 
-
+@media only screen and (min-width:567px) {
+  .left-post {
+    .react-post {
+      width: max-content;
+    }
   }
 }

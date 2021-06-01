@@ -3,11 +3,16 @@
 */
 
 
+a{
+    text-decoration: none;
+}
+
 .section-right-container {
 
     .card {
 
         margin-bottom: 40px;
+        
         .card-header{
             
             align-items: center;
@@ -22,22 +27,29 @@
             .subcard-content, .mini-tag, .mini-tag-btn{
                 font-size: 11px;
                 text-align: initial;
-                margin-bottom: 10px;
+                margin-bottom: 0px;
             }
 
-            .mini-tag{
-                color: gray;
-                border-color: blue;
-            }
+            .list-group-item{
 
-            .mini-tag-btn{
-                background-color: blue;
-                border: 1px solid blue;
-                border-radius: 5px;
-                text-align: center;
-                color: white;
-                width: 35px;
-            }    
+                text-align:left;
+
+                .mini-tag{
+                    color: #808080;
+                    border-color: blue;
+                }
+    
+                .mini-tag-btn{
+                    background-color: blue;
+                    border: 1px solid blue;
+                    border-radius: 5px;
+                    text-align: center;
+                    color: white;
+                    width: 35px;
+                }
+
+            }
+    
         }
 
         .mini-footer{
@@ -54,6 +66,91 @@
         }
 
     }    
+
+
+    .card-profile{
+
+        border: none;
+
+        .card-header {
+            background-color: blueviolet;
+            height: 40px;
+        }
+
+        .profile-container{
+
+            position: relative;
+            height: 40px;
+                 
+            .profile-pos{
+
+                position: absolute;
+                top: -20px;
+                left: 20px;
+                z-index: 1;
+                width: 85%;
+                border: none;
+                
+                .profile-array{
+
+                    display: flex;
+                    align-items: flex-end;
+
+                    .img-profile{
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50%;
+                    }
+
+                    .name-profile p{
+                        margin-bottom: 0px;
+                    }
+
+                    .name-profile a{
+                        color: black; 
+                        text-decoration: none;                       
+                    }       
+
+                    .name-profile a:hover{
+                        color: blue;  
+                        text-decoration: none;                      
+                    }
+        
+                    div{
+                                            
+                        p{
+                            margin-left: 20px;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .list-group{
+
+
+            .list-group-item{
+                border: none;
+                padding-top: 0px;
+                padding-bottom: 0px;
+                margin-bottom: 10px;
+
+    
+                .btn-primary{
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                }
+
+                .btn-primary:hover{
+                    background-color: navy;
+                }
+
+            }
+
+        }        
+
+    }
 
 }
 

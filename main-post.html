@@ -16,29 +16,73 @@
 
 
   <!-- Header Navbar -->
-  <header class="container-fluid">
-    <div class="row">
-      <div class="container border border-primary">
-        <div class="row">
-          <div class="col-12"></div>
-          <p>Header navn bar </p>
-        </div>
+  <!-- position-sticky sticky-top  -->
+  <nav class="position-sticky sticky-top navbar navbar-expand-md navbar-light bg-light ">
+    <div class="container d-flex flex-nowrap justify-content-between">
+      <button class=" navbar-toggler mr-auto" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand bg-dark text-light p-2 mr-auto" href="index.html"><b>DEV</b></a>
+      <button class=" navbar-toggler mr-auto" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search"
+          viewBox="0 0 16 16">
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+        </svg>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+        <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+        <button class="btn btn-outline-primary bg-primary text-white" type="submit"><b>Write a post</b></button>
+      </div>
+      <div class="media">
+        <ul class="navbar-nav flex-row d-sm-flex me-auto mb-2 mb-sm-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-dots"
+                viewBox="0 0 16 16">
+                <path
+                  d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                <path
+                  d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
+              </svg>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bell"
+                viewBox="0 0 16 16">
+                <path
+                  d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+              </svg>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <img src="./assets/profile.jpg" class="img-circle" alt="Cinque Terre" width="32" height="32">
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <main class="container-fluid">
-    <div class="row">
-      <div class="container">
-        <div class="row">
+  <main class="container-fluid ">
+    <div class="row p-3">
+      <div class="container ">
+
+        <section class="row">
 
           <!-- Columna derecha/baja @Rosy -->
-          <section class="left-post col-sm-12 col-md-2 ">
+          <section class="left-post col-sm-12 col-md-1 d-md-flex justify-content-md-end">
 
 
-            <div class="react-post d-flex flex-column align-items-lg-center align-items-md-center  flex-sm-row ">
+            <div class="react-post d-flex flex-column align-items-lg-center align-items-md-center flex-sm-row">
               <ul
-                class="d-flex flex-md-column flex-lg-column  flex-sm-row align-items-lg-center align-items-md-center   p-b-5">
+                class="d-flex flex-md-column flex-lg-column  flex-sm-row align-items-lg-center align-items-md-center   p-b-5 ">
                 <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                       class="corazon  m-2" viewBox="0 0 24 24">
                       <path
@@ -71,7 +115,7 @@
           </section>
 
           <!-- Columna central @ferdi -->
-          <section class="sec-central p-post col-12 col-md-10 col-lg-7 p-4">
+          <section class="sec-central p-post col-12 col-md-11 col-lg-7 p-4">
 
             <!-- Porta img del post -->
             <img class="card-img-top" src="https://picsum.photos/1980" alt="portada">
@@ -355,67 +399,87 @@
           </section>
 
           <!-- Columna derecha/baja @Yair -->
-          <section class=" col-sm-12 col-md-10 offset-md-2 offset-lg-0 col-lg-3 border border-primary">
-            <p>Espacio Yair</p>
+          <section class=" col-sm-12 col-md-10 offset-md-2 offset-lg-0 col-lg-3">
 
             <!--Cards Container-->
-            <section class="section-right-container">
+            <section class="section-right-container sticky-top">
 
 
               <!--Card Poster Profile-->
-              <div class=" card">
-                <div class="card-header d-lg-flex justify-content-between">
-                  <h4>Card Header</h4>
+              <div class=" card card-profile">
+                <div class="card-header">
+
+                </div>
+                <div class="profile-container">
+                  <div class="profile-pos">
+                    <div class="profile-array">
+                      <div>
+                        <a href="Link to Profile">
+                          <img class="img-profile"
+                            src="https://res.cloudinary.com/practicaldev/image/fetch/s--75ErSeyR--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/452501/9bf1251a-c9ff-460b-a2b1-3fd4985d7d04.jpg"
+                            alt="Profile Image">
+                        </a>
+                      </div>
+                      <div class="name-profile">
+                        <a href="Link to Profile">
+                          <p class="font-weight-bold">Anastasia</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="list-group list-group-flush">
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">Content Description around here</div>
-                    <div class="mini-tag">Mini-Tag</div>
-                  </a>
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">Content Description around here</div>
-                    <div class="mini-tag">Mini-Tag</div>
-                  </a>
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">Content Description around here</div>
-                    <div class="mini-tag">Mini-Tag</div>
-                  </a>
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="mini-footer">Card Footer</div>
-                  </a>
+                  <div class="list-group-item">
+                    <div class="subcard-content">Gaming geek, coding in human and programming languages. Buy me a
+                      coffee: https://www.buymeacoffee.com/coffeestasia</div>
+                  </div>
+                  <div class="list-group-item">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">
+                      Follow
+                    </button>
+                  </div>
+                  <div class="list-group-item">
+                    <div class="subcard-content font-weight-bold text-secondary">Work:</div>
+                    <div class="subcard-content">Content Writer</div>
+                  </div>
+                  <div class="list-group-item">
+                    <div class="subcard-content font-weight-bold text-secondary">Location:</div>
+                    <div class="subcard-content">Toronto, Ontario</div>
+                  </div>
+                  <div class="list-group-item">
+                    <div class="subcard-content font-weight-bold text-secondary">Join Date:</div>
+                    <div class="subcard-content">Aug 14, 2020</div>
+                  </div>
                 </div>
               </div>
 
 
               <!--Card Other Post from Poster-->
               <div class=" card">
-                <div class="card-header d-lg-flex justify-content-between">
-                  <h4>Card Header</h4>
+                <div class="card-header d-lg-flex justify-content-between ">
+                  <h6>More from</h6>
+                  <div><a href="">
+                      <h6>Anastasia</h6>
+                    </a>
+                  </div>
                 </div>
                 <div class="list-group list-group-flush">
                   <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">Content Description around here</div>
-                    <div class="mini-tag-btn">New</div>
+                    <div class="subcard-content">Background Music for Coding for Every Taste🎶</div>
+                    <span class="mini-tag">#productivity</span>
+                    <span class="mini-tag">#100daysofcode</span>
+                    <span class="mini-tag">#webdev</span>
+                    <span class="mini-tag">#career</span>
                   </a>
                   <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">Content Description around here</div>
-                    <div class="mini-tag">Mini-Tag</div>
+                    <div class="subcard-content">10 Ways to Prioritize Tasks When Everything is Top Priority (+Free
+                      Worksheets) ✨</div>
+                    <span class="mini-tag">#productivity</span>
+                    <span class="mini-tag">#career</span>
                   </a>
                   <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">Content Description around here</div>
-                    <div class="mini-tag-btn">New</div>
-                  </a>
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">Content Description around here</div>
-                    <div class="mini-tag-btn">New</div>
-                  </a>
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">Content Description around here</div>
-                    <div class="mini-tag">Mini-Tag</div>
-                  </a>
-                  <a href="" class="list-group-item btn btn-light">
-                    <div class="subcard-content">Content Description around here</div>
-                    <div class="mini-tag-btn">New</div>
+                    <div class="subcard-content">What is your biggest productivity challenge?</div>
+                    <span class="mini-tag">#productivity</span>
                   </a>
                 </div>
               </div>
@@ -423,8 +487,8 @@
 
           </section>
 
-        </div>
       </div>
+    </div>
     </div>
   </main>
 
