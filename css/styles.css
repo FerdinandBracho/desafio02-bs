@@ -10,24 +10,43 @@ body {
   background-color: #EEF0F1;
 }
 
+nav {
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.bg-dark {
+  border-radius: 3px;
+  height: 40px;
+}
+
 div.collapse {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 div.collapse input.form-control {
-  width: 40%;
+  max-width: 420px;
+  height: 40px;
 }
 
 div.collapse button.btn {
-  width: 25%;
+  width: 15%;
 }
 
 div.media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 img.img-circle {
@@ -213,56 +232,30 @@ img.img-circle {
   border-radius: 100px;
 }
 
-.sec-central .card-body .avatar-info p {
+.sec-central .card-body .avatar-info .name-info small {
   margin: 0;
   font-size: 12px;
   color: #4D5760;
 }
 
-.sec-central .card-body .avatar-info p:first-child {
+.sec-central .card-body .avatar-info .name-info small:first-child {
   font-weight: bold;
 }
 
-.sec-central .card-body .p-info {
-  margin-top: 20px;
-}
-
-.sec-central .card-body .p-info .p-title a {
+.sec-central .card-body .p-title a {
   text-decoration: none;
   color: black;
 }
 
-.sec-central .card-body .p-info .p-title a h4 {
+.sec-central .card-body .p-title a h4 {
   font-weight: bolder;
 }
 
-.sec-central .card-body .p-info .p-hashtags a {
+.sec-central .card-body .p-hashtags {
   text-decoration: none;
   color: #6a6c6d;
   font-size: 13px;
   margin: 0 2px;
-}
-
-.sec-central .card-body .p-info .p-engage {
-  margin-top: 15px;
-}
-
-.sec-central .card-body .p-info .p-engage .p-likes-c i {
-  color: #4D5760;
-  margin-right: 20px;
-}
-
-.sec-central .card-body .p-info .p-engage .read-save small {
-  color: #4D5760;
-  margin-right: 5px;
-}
-
-.sec-central .card-body .p-info .p-engage .read-save button {
-  background-color: #D2D6DB;
-  border: none;
-  border-radius: 5px;
-  width: 50px;
-  height: 30px;
 }
 
 .sec-central .art-var li {
@@ -495,6 +488,8 @@ a {
 
 .section-right-container .card-profile {
   border: none;
+  position: fixed;
+  top: 100px;
 }
 
 .section-right-container .card-profile .card-header {
