@@ -24,7 +24,7 @@ let myHashStr = window.location.search
 myHashStr = myHashStr.slice(myHashStr.search("=")+1)
 
 /*
-    Step 3: Get The regarding Hash´s JSON
+    Step 3 & 4: Get The regarding Hash´s JSON
     -----------------------------------------------------------------
 */
 
@@ -35,11 +35,33 @@ async function getPost (){
 
     try {
         
-        fetch(`https://desafio-js-54653-default-rtdb.firebaseio.com/posts/.json`)
-        .then(DBResp => myJSON = await DBResp)
+        myJSON = await fetch(`https://desafio-js-54653-default-rtdb.firebaseio.com/posts/${myHashStr}.json`)
+        myJSON = await myJSON.json()
+
+        printPost()
 
     } catch (error) {
         console.log("Error from getPost Function: " + error)       
     }
 
+}
+
+/*
+    Step 5 & 6: Extract and Process The regarding Information
+    -----------------------------------------------------------------
+*/
+
+let cardPost = document.querySelector(".page")
+let cardStr = ""
+
+function printPost(){
+
+    cardStr += `<div class="card" style="width: 100%"></div>`
+    cardStr += `<img src="${myJSON.coverImg}" class="card-img-top" alt="...">`
+    cardStr += `<div class="card-body">`
+    cardStr += `<h5 class="card-title">${myJSON.title}</h5>`
+    cardStr += `<p class="card-text">${myJSON.content}</p>`
+    cardStr += `</div>`
+
+    cardPost.innerHTML = cardStr
 }
