@@ -3,7 +3,7 @@ let result = ''
 
 btn.addEventListener('click', () => {
     let post = {
-            title: 'Introducing Regcode - Create Regular Expressions Easily with Code',
+            title: 'zzzzzz',
             tags: 'js,test,Begginers',
             coverImg: 'https://picsum.photos/500/200',
             user: 'Ferdinand Bracho',
@@ -57,7 +57,7 @@ const insertPostData = async (title, tags, coverImg, user, date, minRead,singleP
                     <small>${formatDate}</small>
                 </div>
             </div>
-            <a href="post.html?post-hash=${singlePostHash}"><h3 class="card-title my-3 text-wrap">${title}</h3></a>
+            <a href="post.html?post-hash=${singlePostHash}" class="p-title"><h3 class="card-title my-3 text-wrap">${title}</h3></a>
             <small class="card-text p-hashtags">${arrTags}</small>
             <div class="d-flex justify-content-end align-items-center">
                 <small class="">5 min read</small>
@@ -81,16 +81,25 @@ const insertPostData = async (title, tags, coverImg, user, date, minRead,singleP
                 return res.json()
             }).then(response => {
 
-                // ! Definition and invoke function to take every post individually  
-                for (item in response) {
-                    let singlePostHash = item
+                arrPost = Object.entries(response)
+                arrPost.reverse()
 
+                let firstPost = arrPost.shift()
+                console.log(firstPost)
+                let {title, tags, coverImg, user, date, minRead} = firstPost[1]
+                insertPostData(title, tags, coverImg, user, date, minRead)
+
+                
+
+                arrPost.forEach(item => {
+                    let singlePostHash = item[0]
                     const GetPostData = async () => {
                         try {
                             await fetch(`https://desafio-js-54653-default-rtdb.firebaseio.com/posts/${singlePostHash}/.json`
                             ).then(res => {
                                 return res.json()
                             }).then(response => {
+                                
                                 let {title, tags, coverImg, user, date, minRead} = response
                                 insertPostData(title, tags, coverImg, user, date, minRead, singlePostHash)
                             })
@@ -99,10 +108,11 @@ const insertPostData = async (title, tags, coverImg, user, date, minRead,singleP
                         }
                     }
                     GetPostData()
-                }
+                })
+
             })
         } catch (error) {
-            console.log(error)
+            console.log(error)  
         }
 
     }
