@@ -1,38 +1,5 @@
-let btn = document.querySelector('#test')
-let result = '' 
-
-// 'yyyy-mm-ddtttt'.substring(0,10)
-
-
-btn.addEventListener('click', () => {
-    let post = {
-            title: 'pruba de ultimo post yairrrrrrrr',
-            tags: 'js,test,Begginers',
-            coverImg: 'https://picsum.photos/500/200',
-            user: 'Ferdinand Bracho',
-            date: new Date(),
-            minRead:'',
-            content: 'lkjasndkjansdjknasjndasdfsdfsdfsdfsdfd', 
-    }
-
-    const sendTest = async () => {
-        try {
-            fetch('https://desafio-js-54653-default-rtdb.firebaseio.com/posts.json', {
-                method: 'POST',
-                body: JSON.stringify(post)
-                }).then((res) => {
-                    return(res.json())
-                }).then((response) => {
-                    console.log(response)
-                })   
-        } catch (error) {
-            console.log(error)
-        }
-    }
-    sendTest()
-})
-
 // ? ///////////////////////////////////////////////////
+//Math.round(cardPost.innerText.length * (0.1/60)) + " min"
 
 const insertPostData =  (title, tags, coverImg, user, date, avatarImg ,singlePostHash) => {
     try {
@@ -56,8 +23,8 @@ const insertPostData =  (title, tags, coverImg, user, date, avatarImg ,singlePos
             <a href="post.html?post-hash=${singlePostHash}" class="p-title"><h3 class="card-title my-3 text-wrap">${title}</h3></a>
             <small class="card-text p-hashtags">${arrTags}</small>
             <div class="d-flex justify-content-end align-items-center">
-                <small class="">5 min read</small>
-                <button type="button" class="btn btn-light mx-1">save</button>
+                <small class=""></small>
+                <button type="button" class="btn btn-light border mx-1">save</button>
             </div>
         </div>  
         </li>       
@@ -88,8 +55,8 @@ const insertVariousPostData = (title, tags, user, date, avatarImg ,singlePostHas
             <a href="post.html?post-hash=${singlePostHash}" class="p-title"><h3 class="card-title my-3 text-wrap">${title}</h3></a>
             <small class="card-text p-hashtags">${arrTags}</small>
             <div class="d-flex justify-content-end align-items-center">
-                <small class="">5 min read</small>
-                <button type="button" class="btn btn-secondary mx-1">save</button>
+                <small class=""></small>
+                <button type="button" class="btn btn-light border mx-1">save</button>
             </div>
         </div>  
         </li>       
