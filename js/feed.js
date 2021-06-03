@@ -34,7 +34,7 @@ btn.addEventListener('click', () => {
 
 // ? ///////////////////////////////////////////////////
 
-const insertPostData = async (title, tags, coverImg, user, date, avatarImg ,singlePostHash) => {
+const insertPostData =  (title, tags, coverImg, user, date, avatarImg ,singlePostHash) => {
     try {
         console.log(singlePostHash)
 
@@ -68,7 +68,7 @@ const insertPostData = async (title, tags, coverImg, user, date, avatarImg ,sing
     }
 }
 
-const insertVariousPostData = async (title, tags, user, date, avatarImg ,singlePostHash) => {
+const insertVariousPostData = (title, tags, user, date, avatarImg ,singlePostHash) => {
     try {
         console.log(singlePostHash)
         let formatDate =  date.substring(0,10)
