@@ -232,56 +232,30 @@ img.img-circle {
   border-radius: 100px;
 }
 
-.sec-central .card-body .avatar-info p {
+.sec-central .card-body .avatar-info .name-info small {
   margin: 0;
   font-size: 12px;
   color: #4D5760;
 }
 
-.sec-central .card-body .avatar-info p:first-child {
+.sec-central .card-body .avatar-info .name-info small:first-child {
   font-weight: bold;
 }
 
-.sec-central .card-body .p-info {
-  margin-top: 20px;
-}
-
-.sec-central .card-body .p-info .p-title a {
+.sec-central .card-body .p-title {
   text-decoration: none;
   color: black;
 }
 
-.sec-central .card-body .p-info .p-title a h4 {
+.sec-central .card-body .p-title h4 {
   font-weight: bolder;
 }
 
-.sec-central .card-body .p-info .p-hashtags a {
+.sec-central .card-body .p-hashtags {
   text-decoration: none;
   color: #6a6c6d;
   font-size: 13px;
   margin: 0 2px;
-}
-
-.sec-central .card-body .p-info .p-engage {
-  margin-top: 15px;
-}
-
-.sec-central .card-body .p-info .p-engage .p-likes-c i {
-  color: #4D5760;
-  margin-right: 20px;
-}
-
-.sec-central .card-body .p-info .p-engage .read-save small {
-  color: #4D5760;
-  margin-right: 5px;
-}
-
-.sec-central .card-body .p-info .p-engage .read-save button {
-  background-color: #D2D6DB;
-  border: none;
-  border-radius: 5px;
-  width: 50px;
-  height: 30px;
 }
 
 .sec-central .art-var li {
@@ -469,7 +443,15 @@ img.img-circle {
   width: 100%;
 }
 
-.myCentralSec .page-title {
+.myCentralSec .page .page-title {
+  width: 100%;
+  margin: 10% auto 0;
+  padding: 20px;
+  background: #e5e5e5;
+  margin: 0;
+}
+
+.page-title {
   margin-top: 5px;
   margin-bottom: 10px;
 }
@@ -554,7 +536,12 @@ img.img-circle {
   border: none;
 }
 
-.myCentralSec .placeholder-content {
+.myCentralSec .page-content .placeholder-content {
+  background: #fff;
+  padding: 25px 0;
+}
+
+.placeholder-content {
   height: 205px;
   overflow: hidden;
   background: #000;
@@ -572,10 +559,10 @@ img.img-circle {
   background: #f6f7f8;
   background: -webkit-gradient(linear, left top, right top, color-stop(2%, #eee), color-stop(18%, #ddd), color-stop(33%, #eee));
   background: linear-gradient(to right, #eee 2%, #ddd 18%, #eee 33%);
-  background-size: 1300px;
+  background-size: 100%;
 }
 
-.myCentralSec .placeholder-content_item {
+.placeholder-content_item {
   width: 100%;
   height: 20px;
   position: absolute;
