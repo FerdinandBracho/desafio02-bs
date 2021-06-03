@@ -119,8 +119,16 @@
         
         &-content {
             background: #fff;
-            padding: 25px 0;
+            padding: 0;
             border: none;
+
+            img {
+                width: 100%;
+            }
+
+            ol, ul{
+                padding-left: 5%;
+            }
         }
 
     }
