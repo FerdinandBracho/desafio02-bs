@@ -34,9 +34,9 @@ btn.addEventListener('click', () => {
 
 // ? ///////////////////////////////////////////////////
 
-const insertPostData = async (title, tags, coverImg, user, date, avatarImg ,singlePostHash) => {
+const insertPostData =  (title, tags, coverImg, user, date, avatarImg ,singlePostHash) => {
     try {
-        console.log(avatarImg)
+        console.log(singlePostHash)
 
         let formatDate =  date.substring(0,10)
         let arrTags =''
@@ -68,8 +68,9 @@ const insertPostData = async (title, tags, coverImg, user, date, avatarImg ,sing
     }
 }
 
-const insertVariousPostData = async (title, tags, user, date, avatarImg,singlePostHash) => {
+const insertVariousPostData = (title, tags, user, date, avatarImg ,singlePostHash) => {
     try {
+        console.log(singlePostHash)
         let formatDate =  date.substring(0,10)
         let arrTags =''
         tags.split(',').forEach(tag => arrTags += '#' + tag + ' ')
@@ -107,19 +108,24 @@ const insertVariousPostData = async (title, tags, user, date, avatarImg,singlePo
             ).then(res => {
                 return res.json()
             }).then(response => {
-
+                console.log(response)
                 arrPost = Object.entries(response)
                 arrPost.reverse()
-
-                let firstPost = arrPost.shift()
-                let {title, tags, coverImg, user, date, minRead} = firstPost[1]
-                insertPostData(title, tags, coverImg, user, date, minRead)
-
                 
-
+                let firstPost = arrPost.shift()
+                console.log(firstPost)
+                let postHash = firstPost[0]
+                console.log(postHash)
+                let {title, tags, coverImg, user, date, minRead, avatarImg} = firstPost[1]
+                insertPostData(title, tags, coverImg, user, date, avatarImg, postHash)
+                
+                
+                
                 arrPost.forEach(item => {
-                    let {title, tags, user, date, minRead} = item[1]
-                    insertVariousPostData(title, tags,user, date, minRead)
+                    let postsHash = item[0]
+                    console.log(postsHash)
+                    let {title, tags, user, date, minRead, avatarImg} = item[1]
+                    insertVariousPostData(title, tags,user, date,avatarImg ,postsHash)
                 })
 
             })
