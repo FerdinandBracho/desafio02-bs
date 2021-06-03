@@ -1,12 +1,12 @@
 // ? ///////////////////////////////////////////////////
 //Math.round(cardPost.innerText.length * (0.1/60)) + " min"
 
-const insertPostData =  (title, tags, coverImg, user, date, avatarImg ,singlePostHash) => {
+const insertPostData = (title, tags, coverImg, user, date, avatarImg, singlePostHash) => {
     try {
         console.log(singlePostHash)
 
-        let formatDate =  date.substring(0,10)
-        let arrTags =''
+        let formatDate = date.substring(0, 10)
+        let arrTags = ''
         tags.split(',').forEach(tag => arrTags += '#' + tag + ' ')
 
         let data = ` 
@@ -28,18 +28,18 @@ const insertPostData =  (title, tags, coverImg, user, date, avatarImg ,singlePos
             </div>
         </div>  
         </li>       
-        ` 
+        `
         document.querySelector('.posts-ul').innerHTML += data
     } catch (error) {
         console.log(error)
     }
 }
 
-const insertVariousPostData = (title, tags, user, date, avatarImg ,singlePostHash) => {
+const insertVariousPostData = (title, tags, user, date, avatarImg, singlePostHash) => {
     try {
         console.log(singlePostHash)
-        let formatDate =  date.substring(0,10)
-        let arrTags =''
+        let formatDate = date.substring(0, 10)
+        let arrTags = ''
         tags.split(',').forEach(tag => arrTags += '#' + tag + ' ')
 
         let data = ` 
@@ -60,7 +60,7 @@ const insertVariousPostData = (title, tags, user, date, avatarImg ,singlePostHas
             </div>
         </div>  
         </li>       
-        ` 
+        `
         document.querySelector('.posts-ul').innerHTML += data
     } catch (error) {
         console.log(error)
@@ -69,41 +69,36 @@ const insertVariousPostData = (title, tags, user, date, avatarImg ,singlePostHas
 
 // ? ///////////////////////////////////////////////////////////////////////////
 
-    const getAllPost = async () => {
-        try {
-            await fetch ('https://desafio-js-54653-default-rtdb.firebaseio.com/posts/.json'
-            ).then(res => {
-                return res.json()
-            }).then(response => {
-                console.log(response)
-                arrPost = Object.entries(response)
-                arrPost.reverse()
-                
-                let firstPost = arrPost.shift()
-                console.log(firstPost)
-                let postHash = firstPost[0]
-                console.log(postHash)
-                let {title, tags, coverImg, user, date, minRead, avatarImg} = firstPost[1]
-                insertPostData(title, tags, coverImg, user, date, avatarImg, postHash)
-                
-                
-                
-                arrPost.forEach(item => {
-                    let postsHash = item[0]
-                    console.log(postsHash)
-                    let {title, tags, user, date, minRead, avatarImg} = item[1]
-                    insertVariousPostData(title, tags,user, date,avatarImg ,postsHash)
-                })
+const getAllPost = async() => {
+    try {
+        await fetch('https://desafio-js-54653-default-rtdb.firebaseio.com/posts/.json').then(res => {
+            return res.json()
+        }).then(response => {
+            console.log(response)
+            arrPost = Object.entries(response)
+            arrPost.reverse()
 
+            let firstPost = arrPost.shift()
+            console.log(firstPost)
+            let postHash = firstPost[0]
+            console.log(postHash)
+            let { title, tags, coverImg, user, date, minRead, avatarImg } = firstPost[1]
+            insertPostData(title, tags, coverImg, user, date, avatarImg, postHash)
+
+
+
+            arrPost.forEach(item => {
+                let postsHash = item[0]
+                console.log(postsHash)
+                let { title, tags, user, date, minRead, avatarImg } = item[1]
+                insertVariousPostData(title, tags, user, date, avatarImg, postsHash)
             })
-        } catch (error) {
-            console.log(error)  
-        }
 
+        })
+    } catch (error) {
+        console.log(error)
     }
 
-    getAllPost()
+}
 
-
-
-
+getAllPost()

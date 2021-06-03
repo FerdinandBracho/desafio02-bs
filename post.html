@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/df6ea92ceb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styles.css">
     <title>Post</title>
@@ -19,15 +18,11 @@
     <!-- position-sticky sticky-top  -->
     <nav class="position-sticky sticky-top navbar navbar-expand-md navbar-light bg-light ">
         <div class="container-fluid  d-flex flex-nowrap justify-content-between">
-            <button class=" navbar-toggler " type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class=" navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand bg-dark text-light p-2 mr-auto" href="index.html"><b>DEV</b></a>
-            <button class=" navbar-toggler mr-auto" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class=" navbar-toggler mr-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search"
                     viewBox="0 0 16 16">
                     <path
@@ -36,15 +31,14 @@
             </button>
             <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
                 <input class=" form-control me-2 ml-4" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-primary bg-primary ml-auto text-white" type="submit"><b>Create a
-                        Post</b></button>
+                <a href="new_post.html" class="btn btn-outline-primary bg-primary ml-auto text-white"><b>Create
+                        Post</b></a>
             </div>
             <div class="media">
                 <ul class="navbar-nav flex-row d-sm-flex me-auto mb-2 mb-sm-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                class="bi bi-chat-dots" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
                                 <path
                                     d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
                                 <path
@@ -54,24 +48,21 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                class="bi bi-bell" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
                                 <path
                                     d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
                             </svg>
                         </a>
                     </li>
                     <li class=" dropdown nav-item">
-                        <a class="nav-link btn " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <img src="./assets/profile.jpg" class="img-circle" alt="Cinque Terre" width="32"
-                                height="32">
+                        <a class="nav-link btn " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="./assets/profile.jpg" class="img-circle" alt="Cinque Terre" width="32" height="32">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
                             <a class="dropdown-item" href="#">User Name</a>
                             <hr>
                             <a class="dropdown-item" href="#">Dashboard</a>
-                            <a class="dropdown-item" href="#">Create a post</a>
+                            <a class="dropdown-item" href="new_post.html">Create a post</a>
                             <a class="dropdown-item" href="#">Reading List</a>
                             <a class="dropdown-item" href="#">Settings</a>
                             <hr>
@@ -83,7 +74,6 @@
             </div>
         </div>
     </nav>
-
     <main class="container-fluid ">
         <div class="row p-3">
             <div class="container ">
@@ -94,10 +84,8 @@
                     <section class="left-post col-sm-12 col-md-1 d-md-flex justify-content-md-end">
 
 
-                        <div
-                            class="react-post d-flex flex-column align-items-lg-center align-items-md-center flex-sm-row">
-                            <ul
-                                class="d-flex flex-md-column flex-lg-column  flex-sm-row align-items-lg-center align-items-md-center   p-b-5 ">
+                        <div class="react-post d-flex flex-column align-items-lg-center align-items-md-center flex-sm-row">
+                            <ul class="d-flex flex-md-column flex-lg-column  flex-sm-row align-items-lg-center align-items-md-center   p-b-5 ">
                                 <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             fill="currentColor" class="corazon  m-2" viewBox="0 0 24 24">
                                             <path
@@ -105,8 +93,7 @@
                                             </path>
                                         </svg></a> </li><span class="react-number">15</span>
                                 <li>
-                                    <a href=""> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            fill="currentColor" class="unicornio m-2" viewBox="0 0 24 24">
+                                    <a href=""> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="unicornio m-2" viewBox="0 0 24 24">
                                             <path
                                                 d="M5.645 8.013c.013-.265-.261-.323-.4-.183-1.16 1.17-1.822 3.865-.344 7.32.294.961 1.938 3.19.84 6.131l-.003.006c-.094.255.206.404.366.263 1.395-1.226 1.933-3.593 1.1-6.375-.488-1.657-1.955-4.226-1.559-7.162zm-3.22 2.738c.05-.137-.124-.417-.326-.225-.939.893-1.316 2.863-.976 4.605.547 2.878 2.374 3.526 2.066 6.629-.028.102.176.38.348.154 1.546-2.033.409-4.453-.241-6.006-1.005-2.386-1.087-4.118-.871-5.157zM22.2 3.543l-8.579 3.68c-.332-.343-.615-.63-.76-.773-.527-.517.313-4.224-.409-4.439-.933-.277-5.042 4.624-4.696 7.953.224 2.735 2.193 4.89 1.72 8.412 3.446-.644 4.841 1.697 5.83 2.45 1.752 1.335 5.155-.551 3.807-3.582-.193-.435-2.05-4.732-2.931-6.775l6.619-5.94c.486-.44-.003-1.242-.601-.986zm-9.418 9.535a.828.828 0 01-.74-.9.825.825 0 01.81-.76c.479 0 .85.42.81.903a.824.824 0 01-.88.757z">
                                             </path>
@@ -154,8 +141,7 @@
                             <!--Profile Section-->
                             <div class="page-profile">
                                 <div>
-                                    <img class="myAvatar"
-                                        src="https://res.cloudinary.com/practicaldev/image/fetch/s--75ErSeyR--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/452501/9bf1251a-c9ff-460b-a2b1-3fd4985d7d04.jpg"
+                                    <img class="myAvatar" src="https://res.cloudinary.com/practicaldev/image/fetch/s--75ErSeyR--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/452501/9bf1251a-c9ff-460b-a2b1-3fd4985d7d04.jpg"
                                         alt="">
                                 </div>
                                 <div>
@@ -194,12 +180,6 @@
 
                         </div>
 
-                        <div>
-
-
-
-                        </div>
-
 
                     </section>
 
@@ -220,8 +200,7 @@
                                         <div class="profile-array">
                                             <div>
                                                 <a href="Link to Profile">
-                                                    <img class="img-profile"
-                                                        src="https://res.cloudinary.com/practicaldev/image/fetch/s--75ErSeyR--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/452501/9bf1251a-c9ff-460b-a2b1-3fd4985d7d04.jpg"
+                                                    <img class="img-profile" src="https://res.cloudinary.com/practicaldev/image/fetch/s--75ErSeyR--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/452501/9bf1251a-c9ff-460b-a2b1-3fd4985d7d04.jpg"
                                                         alt="Profile Image">
                                                 </a>
                                             </div>
@@ -235,8 +214,7 @@
                                 </div>
                                 <div class="list-group list-group-flush">
                                     <div class="list-group-item">
-                                        <div class="subcard-content">Gaming geek, coding in human and programming
-                                            languages. Buy me a coffee: https://www.buymeacoffee.com/coffeestasia</div>
+                                        <div class="subcard-content">Gaming geek, coding in human and programming languages. Buy me a coffee: https://www.buymeacoffee.com/coffeestasia</div>
                                     </div>
                                     <div class="list-group-item">
                                         <button type="button" class="btn btn-primary btn-lg btn-block">
@@ -278,8 +256,7 @@
                                         <span class="mini-tag">#career</span>
                                     </a>
                                     <a href="" class="list-group-item btn btn-light">
-                                        <div class="subcard-content">10 Ways to Prioritize Tasks When Everything is Top
-                                            Priority (+Free Worksheets) ✨</div>
+                                        <div class="subcard-content">10 Ways to Prioritize Tasks When Everything is Top Priority (+Free Worksheets) ✨</div>
                                         <span class="mini-tag">#productivity</span>
                                         <span class="mini-tag">#career</span>
                                     </a>
@@ -353,12 +330,10 @@
                     </div>
 
                     <hr>
-                    <p><a href="">DEV Community</a> – A constructive and inclusive social network for software
-                        developers. With you every step of your journey.</p>
+                    <p><a href="">DEV Community</a> – A constructive and inclusive social network for software developers. With you every step of your journey.</p>
                     <div class="mb-1">
                         <p>Built on <a href=""><strong>Forem</strong></a> -the <a href=""><strong>open
-                                    source</strong></a> software that powers <a href=""><strong>DEV</strong></a> and
-                            other inclusive communities.</p>
+                                    source</strong></a> software that powers <a href=""><strong>DEV</strong></a> and other inclusive communities.</p>
                         <p>Made with love and <a href=""><strong>Ruby on Rails</strong></a> DEV Community © 2016 - 2021.
                         </p>
                         <div>
@@ -379,14 +354,9 @@
     </footer>
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
     <script src="js/post-viewer.js"></script>
 </body>
 

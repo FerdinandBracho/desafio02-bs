@@ -1047,4 +1047,42 @@ a {
     display: none;
   }
 }
+
+.container .article__form {
+  height: 100vh;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: auto, 5px;
+}
+
+.container .article__form .article_form_header .botones_up .right-buttons {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .article__form .article_form_header .botones_up .right-buttons li {
+  list-style: none;
+}
+
+.container .article__form .article_form_content {
+  background: white;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.container .article__form .article_form_content .article_form_top .title p {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.container .article__form main .article_form_content {
+  background: #fafcfc;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
 /*# sourceMappingURL=styles.css.map */
