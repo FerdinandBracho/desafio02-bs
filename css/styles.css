@@ -428,7 +428,22 @@ img.img-circle {
   }
 }
 
-.page {
+.myCentralSec {
+  background-color: white;
+  padding: 0;
+}
+
+.myCentralSec .page {
+  width: 100%;
+  margin: 0;
+  padding: 0px;
+}
+
+.myCentralSec .page-cover {
+  width: 100%;
+}
+
+.myCentralSec .page .page-title {
   width: 100%;
   margin: 10% auto 0;
   padding: 20px;
@@ -441,7 +456,87 @@ img.img-circle {
   margin-bottom: 10px;
 }
 
-.page-content {
+.myCentralSec .page-tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.myCentralSec .page-tags a {
+  border-radius: 10%;
+  padding: 5px;
+  margin-left: 10px;
+  color: white;
+}
+
+.myCentralSec .page-tags .myAnchor0 {
+  background-color: lightblue;
+  border: 1px solid lightblue;
+}
+
+.myCentralSec .page-tags .myAnchor1 {
+  background-color: lightsalmon;
+  border: 1px solid lightsalmon;
+}
+
+.myCentralSec .page-tags .myAnchor2 {
+  background-color: lightseagreen;
+  border: 1px solid lightseagreen;
+}
+
+.myCentralSec .page-tags .myAnchor3 {
+  background-color: lightskyblue;
+  border: 1px solid lightskyblue;
+}
+
+.myCentralSec .page-tags ul {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.myCentralSec .page-tags ul li a {
+  background-color: rosybrown;
+  border: 1px solid red;
+  border-radius: 15%;
+  padding: 5px;
+  margin-left: 10px;
+  color: white;
+}
+
+.myCentralSec .page-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  padding: 5px;
+}
+
+.myCentralSec .page-profile div {
+  padding: 10px;
+}
+
+.myCentralSec .page-profile .myAvatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.myCentralSec .page-profile .myName {
+  font-weight: bold;
+}
+
+.myCentralSec .page-content {
+  background: #fff;
+  padding: 25px 0;
+  border: none;
+}
+
+.myCentralSec .page-content .placeholder-content {
   background: #fff;
   padding: 25px 0;
 }
@@ -475,81 +570,99 @@ img.img-circle {
   z-index: 2;
 }
 
-.placeholder-content_item:after, .placeholder-content_item:before {
+.myCentralSec .placeholder-content_item:after, .myCentralSec .placeholder-content_item:before {
   width: inherit;
   height: inherit;
   content: '';
   position: absolute;
 }
 
-.placeholder-content_item:nth-child(1) {
+.myCentralSec .placeholder-content_item:nth-child(1) {
   top: 0;
   left: 0;
 }
 
-.placeholder-content_item:nth-child(2) {
+.myCentralSec .placeholder-content_item:nth-child(2) {
   top: 20px;
   left: 0;
   width: 10%;
   height: 90px;
 }
 
-.placeholder-content_item:nth-child(3) {
+.myCentralSec .placeholder-content_item:nth-child(3) {
   top: 0px;
   left: 0;
   width: 10%;
   height: 100%;
 }
 
-.placeholder-content_item:nth-child(4) {
+.myCentralSec .placeholder-content_item:nth-child(4) {
   top: 20px;
   width: 20px;
   left: 170px;
   height: 90px;
 }
 
-.placeholder-content_item:nth-child(5) {
+.myCentralSec .placeholder-content_item:nth-child(5) {
   top: 40px;
   left: 190px;
   height: 12px;
 }
 
-.placeholder-content_item:nth-child(6) {
+.myCentralSec .placeholder-content_item:nth-child(6) {
   top: 75px;
   left: 190px;
   height: 12px;
 }
 
-.placeholder-content_item:nth-child(7) {
+.myCentralSec .placeholder-content_item:nth-child(7) {
   top: 20px;
   right: 0;
   width: 23%;
   height: 20px;
 }
 
-.placeholder-content_item:nth-child(8) {
+.myCentralSec .placeholder-content_item:nth-child(8) {
   top: 0;
   right: 0;
   width: 10%;
   height: 100%;
 }
 
-.placeholder-content_item:nth-child(9) {
+.myCentralSec .placeholder-content_item:nth-child(9) {
   top: 110px;
   height: 17px;
   left: 0;
 }
 
-.placeholder-content_item:nth-child(10) {
+.myCentralSec .placeholder-content_item:nth-child(10) {
   top: 149px;
   height: 12px;
   left: 0;
 }
 
-.placeholder-content_item:nth-child(11) {
+.myCentralSec .placeholder-content_item:nth-child(11) {
   top: 183px;
   left: 0;
   height: 100%;
+}
+
+@-webkit-keyframes placeholderAnimate {
+  0% {
+    background-position: -650px 0;
+  }
+  100% {
+    background-position: 650px 0;
+  }
+}
+
+@keyframes placeholderAnimate {
+  0% {
+    background-position: -650px 0;
+  }
+  100% {
+    background-position: 650px 0;
+  }
 }
 
 /* Inicio sección Derecha Yair
@@ -612,7 +725,7 @@ a {
 
 .section-right-container .card-profile {
   border: none;
-  position: fixed;
+  position: static;
   top: 100px;
 }
 
