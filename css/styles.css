@@ -232,56 +232,30 @@ img.img-circle {
   border-radius: 100px;
 }
 
-.sec-central .card-body .avatar-info p {
+.sec-central .card-body .avatar-info .name-info small {
   margin: 0;
   font-size: 12px;
   color: #4D5760;
 }
 
-.sec-central .card-body .avatar-info p:first-child {
+.sec-central .card-body .avatar-info .name-info small:first-child {
   font-weight: bold;
 }
 
-.sec-central .card-body .p-info {
-  margin-top: 20px;
-}
-
-.sec-central .card-body .p-info .p-title a {
+.sec-central .card-body .p-title {
   text-decoration: none;
   color: black;
 }
 
-.sec-central .card-body .p-info .p-title a h4 {
+.sec-central .card-body .p-title h4 {
   font-weight: bolder;
 }
 
-.sec-central .card-body .p-info .p-hashtags a {
+.sec-central .card-body .p-hashtags {
   text-decoration: none;
   color: #6a6c6d;
   font-size: 13px;
   margin: 0 2px;
-}
-
-.sec-central .card-body .p-info .p-engage {
-  margin-top: 15px;
-}
-
-.sec-central .card-body .p-info .p-engage .p-likes-c i {
-  color: #4D5760;
-  margin-right: 20px;
-}
-
-.sec-central .card-body .p-info .p-engage .read-save small {
-  color: #4D5760;
-  margin-right: 5px;
-}
-
-.sec-central .card-body .p-info .p-engage .read-save button {
-  background-color: #D2D6DB;
-  border: none;
-  border-radius: 5px;
-  width: 50px;
-  height: 30px;
 }
 
 .sec-central .art-var li {
@@ -452,6 +426,130 @@ img.img-circle {
   .sec-central nav li {
     list-style: none;
   }
+}
+
+.page {
+  width: 100%;
+  margin: 10% auto 0;
+  padding: 20px;
+  background: #e5e5e5;
+  margin: 0;
+}
+
+.page-title {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.page-content {
+  background: #fff;
+  padding: 25px 0;
+}
+
+.placeholder-content {
+  height: 205px;
+  overflow: hidden;
+  background: #000;
+  position: relative;
+  -webkit-animation-duration: 1.7s;
+          animation-duration: 1.7s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-name: placeholderAnimate;
+          animation-name: placeholderAnimate;
+  background: #f6f7f8;
+  background: -webkit-gradient(linear, left top, right top, color-stop(2%, #eee), color-stop(18%, #ddd), color-stop(33%, #eee));
+  background: linear-gradient(to right, #eee 2%, #ddd 18%, #eee 33%);
+  background-size: 100%;
+}
+
+.placeholder-content_item {
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  background: #fff;
+  z-index: 2;
+}
+
+.placeholder-content_item:after, .placeholder-content_item:before {
+  width: inherit;
+  height: inherit;
+  content: '';
+  position: absolute;
+}
+
+.placeholder-content_item:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.placeholder-content_item:nth-child(2) {
+  top: 20px;
+  left: 0;
+  width: 10%;
+  height: 90px;
+}
+
+.placeholder-content_item:nth-child(3) {
+  top: 0px;
+  left: 0;
+  width: 10%;
+  height: 100%;
+}
+
+.placeholder-content_item:nth-child(4) {
+  top: 20px;
+  width: 20px;
+  left: 170px;
+  height: 90px;
+}
+
+.placeholder-content_item:nth-child(5) {
+  top: 40px;
+  left: 190px;
+  height: 12px;
+}
+
+.placeholder-content_item:nth-child(6) {
+  top: 75px;
+  left: 190px;
+  height: 12px;
+}
+
+.placeholder-content_item:nth-child(7) {
+  top: 20px;
+  right: 0;
+  width: 23%;
+  height: 20px;
+}
+
+.placeholder-content_item:nth-child(8) {
+  top: 0;
+  right: 0;
+  width: 10%;
+  height: 100%;
+}
+
+.placeholder-content_item:nth-child(9) {
+  top: 110px;
+  height: 17px;
+  left: 0;
+}
+
+.placeholder-content_item:nth-child(10) {
+  top: 149px;
+  height: 12px;
+  left: 0;
+}
+
+.placeholder-content_item:nth-child(11) {
+  top: 183px;
+  left: 0;
+  height: 100%;
 }
 
 /* Inicio sección Derecha Yair
