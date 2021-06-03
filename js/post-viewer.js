@@ -61,14 +61,17 @@ function printPost(){
 
     printTags()
 
+    let myAvatar = document.querySelector(".page-profile .myAvatar")
+    myAvatar.setAttribute("href",myJSON.myAvatar)
+
     let myName = document.querySelector(".page-profile .myName")
     myName.innerText = myJSON.user
 
     let myDate = document.querySelector(".page-profile .myDate")
-    myDate.innerText = myJSON.date
+    myDate.innerText = printDate(myJSON.date)
 
-    let myRead =  document.querySelector(".page-profile .myRead")
-    myRead.innerText = myJSON.minRead
+    let myEdBtn = document.querySelector(".page-profile .myEdBtn")
+    myEdBtn.setAttribute("href",`edit-post.html?post-hash=${myHashStr}`)
 
     let cardPost = document.querySelector(".page-content")
     let cardStr = ""
@@ -79,6 +82,9 @@ function printPost(){
     cardStr += `</div>`
 
     cardPost.innerHTML = cardStr
+
+    let myRead =  document.querySelector(".page-profile .myRead")
+    myRead.innerText = Math.round(cardPost.innerText.length * (0.1/60)) + " min"
 
 }
 
@@ -97,7 +103,7 @@ function printTags () {
         let myAnchor = document.createElement("a")
 
         myAnchor.setAttribute("class","myAnchor"+counter)
-        myAnchor.innerText = " #" + item + "_ "
+        myAnchor.innerText = " #" + item
 
         myIL.appendChild(myAnchor)
         myUL.appendChild(myIL)
@@ -105,6 +111,16 @@ function printTags () {
         counter += 1
 
     })
+       
+}
 
-        
+function printDate(myStrDate){
+
+    // example: "2021-06-03T03:24:30.158Z"
+
+    let myDate = new Date(myStrDate)
+    let dateStr = myDate.toString().substr(0,16)
+ 
+    return dateStr
+
 }
