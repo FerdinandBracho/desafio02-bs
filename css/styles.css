@@ -808,7 +808,8 @@ a {
 .container .article__form {
   height: 100vh;
   max-width: 800px;
-  margin: 0, auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: auto, 5px;
 }
 
@@ -834,16 +835,11 @@ a {
 }
 
 .container .article__form main .article_form_content {
-  background: white;
+  background: #fafcfc;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.container .article__form main .article_form_content .article_form_top .btn {
-  border-radius: 4px;
-  border: 2px solid #d2d6db;
 }
 /*# sourceMappingURL=styles.css.map */

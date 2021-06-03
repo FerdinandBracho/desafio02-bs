@@ -14,7 +14,7 @@ $(document).ready(() => {
                 quill.root.innerHTML = content
                 $('#tags_tag').val(tags)
                 $('#avatarImg').val(avatarImg)
-                console.log(tags)
+
             }
 
         } catch (error) {
@@ -22,7 +22,7 @@ $(document).ready(() => {
         }
     }
     async function editPost(objEditedPost) {
-        console.log('hola', myHashStr1)
+
         try {
             let req = await $.ajax({
                 url: `https://desafio-js-54653-default-rtdb.firebaseio.com/posts/${myHashStr1}.json`,
@@ -30,9 +30,9 @@ $(document).ready(() => {
                 dataType: "json",
                 data: JSON.stringify(objEditedPost),
             })
-
+            window.location.pathname = '/'
             console.log(req)
-            req.name ? window.location.pathname = '/' : ''
+
         } catch (error) {
             console.log(error)
         }
@@ -129,5 +129,37 @@ $(document).ready(() => {
 
 
 
+
+    const deletepost = async(hash) => {
+        try {
+            let myUrl = `https://desafio-js-54653-default-rtdb.firebaseio.com/posts/${hash}.json`
+
+            console.log(myUrl)
+
+            await $.ajax({
+                url: myUrl,
+                method: 'DELETE',
+                dataType: 'json',
+                success: response => {
+                    printPostFetch()
+                }
+            })
+            window.location.pathname = '/'
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    $('#btn__delete--post').click(function(myevent) {
+        myevent.preventDefault()
+        let myHashStr1 = window.location.search
+        myHashStr1 = myHashStr1.slice(myHashStr1.search("=") + 1)
+
+        console.log('evento delete button ')
+        deletepost(myHashStr1)
+
+
+
+    })
 
 })

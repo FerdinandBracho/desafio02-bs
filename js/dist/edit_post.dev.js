@@ -27,7 +27,6 @@ $(document).ready(function () {
               quill.root.innerHTML = content;
               $('#tags_tag').val(tags);
               $('#avatarImg').val(avatarImg);
-              console.log(tags);
             }
 
             _context.next = 10;
@@ -52,9 +51,8 @@ $(document).ready(function () {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
-            console.log('hola', myHashStr1);
-            _context2.prev = 1;
-            _context2.next = 4;
+            _context2.prev = 0;
+            _context2.next = 3;
             return regeneratorRuntime.awrap($.ajax({
               url: "https://desafio-js-54653-default-rtdb.firebaseio.com/posts/".concat(myHashStr1, ".json"),
               method: 'PUT',
@@ -62,24 +60,24 @@ $(document).ready(function () {
               data: JSON.stringify(objEditedPost)
             }));
 
-          case 4:
+          case 3:
             req = _context2.sent;
+            window.location.pathname = '/';
             console.log(req);
-            req.name ? window.location.pathname = '/' : '';
-            _context2.next = 12;
+            _context2.next = 11;
             break;
 
-          case 9:
-            _context2.prev = 9;
-            _context2.t0 = _context2["catch"](1);
+          case 8:
+            _context2.prev = 8;
+            _context2.t0 = _context2["catch"](0);
             console.log(_context2.t0);
 
-          case 12:
+          case 11:
           case "end":
             return _context2.stop();
         }
       }
-    }, null, null, [[1, 9]]);
+    }, null, null, [[0, 8]]);
   }
 
   printPostFetch();
@@ -181,5 +179,50 @@ $(document).ready(function () {
     validationPattern: null,
     // duplicate validation
     unique: true
+  });
+
+  var deletepost = function deletepost(hash) {
+    var myUrl;
+    return regeneratorRuntime.async(function deletepost$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            _context3.prev = 0;
+            myUrl = "https://desafio-js-54653-default-rtdb.firebaseio.com/posts/".concat(hash, ".json");
+            console.log(myUrl);
+            _context3.next = 5;
+            return regeneratorRuntime.awrap($.ajax({
+              url: myUrl,
+              method: 'DELETE',
+              dataType: 'json',
+              success: function success(response) {
+                printPostFetch();
+              }
+            }));
+
+          case 5:
+            window.location.pathname = '/';
+            _context3.next = 11;
+            break;
+
+          case 8:
+            _context3.prev = 8;
+            _context3.t0 = _context3["catch"](0);
+            console.log(_context3.t0);
+
+          case 11:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, null, null, [[0, 8]]);
+  };
+
+  $('#btn__delete--post').click(function (myevent) {
+    myevent.preventDefault();
+    var myHashStr1 = window.location.search;
+    myHashStr1 = myHashStr1.slice(myHashStr1.search("=") + 1);
+    console.log('evento delete button ');
+    deletepost(myHashStr1);
   });
 });
