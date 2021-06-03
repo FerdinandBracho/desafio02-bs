@@ -29,6 +29,7 @@ myHashStr = myHashStr.slice(myHashStr.search("=")+1)
 */
 
 let myJSON
+
 getPost()
 
 async function getPost (){
@@ -39,6 +40,7 @@ async function getPost (){
         myJSON = await myJSON.json()
 
         printPost()
+        printCardProfile()
 
     } catch (error) {
         console.log("Error from getPost Function: " + error)       
@@ -62,7 +64,7 @@ function printPost(){
     printTags()
 
     let myAvatar = document.querySelector(".page-profile .myAvatar")
-    myAvatar.setAttribute("href",myJSON.myAvatar)
+    myAvatar.setAttribute("src",myJSON.avatarImg)
 
     let myName = document.querySelector(".page-profile .myName")
     myName.innerText = myJSON.user
@@ -70,20 +72,18 @@ function printPost(){
     let myDate = document.querySelector(".page-profile .myDate")
     myDate.innerText = printDate(myJSON.date)
 
+    let myRead =  document.querySelector(".page-profile .myRead")
+
     let myEdBtn = document.querySelector(".page-profile .myEdBtn")
-    myEdBtn.setAttribute("href",`edit-post.html?post-hash=${myHashStr}`)
+    myEdBtn.setAttribute("href",`edit_post.html?post-hash=${myHashStr}`)
 
     let cardPost = document.querySelector(".page-content")
     let cardStr = ""
   
     cardStr += `<div class="card" style="width: 100%; border:none">`
-    cardStr += `<div class="card-body">`
-    cardStr += `<p class="card-text">${myJSON.content}</p>`
-    cardStr += `</div>`
+    cardStr += `<div class="card-body">${myJSON.content}</div>`
 
-    cardPost.innerHTML = cardStr
-
-    let myRead =  document.querySelector(".page-profile .myRead")
+    cardPost.innerHTML = cardStr  
     myRead.innerText = Math.round(cardPost.innerText.length * (0.1/60)) + " min"
 
 }
@@ -124,3 +124,15 @@ function printDate(myStrDate){
     return dateStr
 
 }
+
+function printCardProfile () {
+
+    let myAvatar = document.querySelector(".profile-array .img-profile")
+    myAvatar.src = myJSON.avatarImg
+
+    let myProfile = document.querySelector(".profile-array .myname-profile")
+    myProfile.innerText = myJSON.user
+
+}
+
+
