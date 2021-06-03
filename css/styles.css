@@ -242,12 +242,12 @@ img.img-circle {
   font-weight: bold;
 }
 
-.sec-central .card-body .p-title a {
+.sec-central .card-body .p-title {
   text-decoration: none;
   color: black;
 }
 
-.sec-central .card-body .p-title a h4 {
+.sec-central .card-body .p-title h4 {
   font-weight: bolder;
 }
 

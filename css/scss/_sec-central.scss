@@ -48,53 +48,51 @@
     }
 
 
+    .card-body  {
+        padding: 10px;
 
-        .card-body  {
-            padding: 10px;
-
-            .avatar-info  {
-                img  {
-                    width: 35px;
-                    height: 35px;
-                    margin-right: 10px;
-                    border-radius: 100px;
-                }
-
-                .name-info {
-
-                    small  {
-                        margin: 0;
-                        font-size: 12px;
-                        color: #4D5760;
-                    }
-    
-                    small:first-child {
-                        font-weight: bold;
-                    }
-                }
-
+        .avatar-info  {
+            img  {
+                width: 35px;
+                height: 35px;
+                margin-right: 10px;
+                border-radius: 100px;
             }
 
+            .name-info {
 
-            .p-title  {
-                a {
-                    text-decoration: none;
-                    color: black;
-                    h4  {
-                        font-weight: bolder;
-                    } 
+                small  {
+                    margin: 0;
+                    font-size: 12px;
+                    color: #4D5760;
                 }
 
+                small:first-child {
+                    font-weight: bold;
+                }
             }
 
-            .p-hashtags  {
-                text-decoration: none;
-                color: #6a6c6d; 
-                font-size: 13px; 
-                margin: 0 2px;                                              
-            }                       
-            
         }
+
+
+        .p-title  {
+                text-decoration: none;
+                color: black;
+                h4  {
+                    font-weight: bolder;
+                } 
+
+
+        }
+
+        .p-hashtags  {
+            text-decoration: none;
+            color: #6a6c6d; 
+            font-size: 13px; 
+            margin: 0 2px;                                              
+        }                       
+        
+    }
     
 
     .art-var  {
