@@ -51,17 +51,60 @@ async function getPost (){
     -----------------------------------------------------------------
 */
 
-let cardPost = document.querySelector(".page")
-let cardStr = ""
-
 function printPost(){
 
-    cardStr += `<div class="card" style="width: 100%"></div>`
-    cardStr += `<img src="${myJSON.coverImg}" class="card-img-top" alt="...">`
+    let coverPost = document.querySelector(".page-cover")
+    coverPost.setAttribute("src",myJSON.coverImg)
+
+    let cardHeader = document.querySelector(".page-title")
+    cardHeader.innerText = myJSON.title
+
+    printTags()
+
+    let myName = document.querySelector(".page-profile .myName")
+    myName.innerText = myJSON.user
+
+    let myDate = document.querySelector(".page-profile .myDate")
+    myDate.innerText = myJSON.date
+
+    let myRead =  document.querySelector(".page-profile .myRead")
+    myRead.innerText = myJSON.minRead
+
+    let cardPost = document.querySelector(".page-content")
+    let cardStr = ""
+  
+    cardStr += `<div class="card" style="width: 100%; border:none">`
     cardStr += `<div class="card-body">`
-    cardStr += `<h5 class="card-title">${myJSON.title}</h5>`
     cardStr += `<p class="card-text">${myJSON.content}</p>`
     cardStr += `</div>`
 
     cardPost.innerHTML = cardStr
+
+}
+
+function printTags () {
+
+    let myUL = document.querySelector(".page-tags ul")
+    myUL.innerHTML = ""
+
+    let counter = 0
+
+    myJSON["tags"].split(",").forEach(item => {
+
+        console.log(item)
+
+        let myIL = document.createElement("il")
+        let myAnchor = document.createElement("a")
+
+        myAnchor.setAttribute("class","myAnchor"+counter)
+        myAnchor.innerText = " #" + item + "_ "
+
+        myIL.appendChild(myAnchor)
+        myUL.appendChild(myIL)
+
+        counter += 1
+
+    })
+
+        
 }
