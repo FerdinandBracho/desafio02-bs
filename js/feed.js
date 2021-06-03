@@ -1,9 +1,12 @@
 let btn = document.querySelector('#test')
 let result = '' 
 
+// 'yyyy-mm-ddtttt'.substring(0,10)
+
+
 btn.addEventListener('click', () => {
     let post = {
-            title: 'pruba de ultimo post',
+            title: 'pruba de ultimo post yairrrrrrrr',
             tags: 'js,test,Begginers',
             coverImg: 'https://picsum.photos/500/200',
             user: 'Ferdinand Bracho',
@@ -31,19 +34,12 @@ btn.addEventListener('click', () => {
 
 // ? ///////////////////////////////////////////////////
 
-const insertPostData = async (title, tags, coverImg, user, date, minRead,singlePostHash) => {
+const insertPostData = async (title, tags, coverImg, user, date, avatarImg ,singlePostHash) => {
     try {
+        console.log(avatarImg)
 
-        function getDate() {
-            let yourDate = new Date()
-            const offset = yourDate.getTimezoneOffset()
-            yourDate = new Date(yourDate.getTime() - (offset*60*1000))
-            return yourDate.toISOString()
-        }
-
-        let formatDate =  getDate()
+        let formatDate =  date.substring(0,10)
         let arrTags =''
-
         tags.split(',').forEach(tag => arrTags += '#' + tag + ' ')
 
         let data = ` 
@@ -51,9 +47,9 @@ const insertPostData = async (title, tags, coverImg, user, date, minRead,singleP
         <img src="${coverImg}" class="card-img-top" alt="post-img">
         <div class="card-body">
             <div class="d-flex avatar-info">
-                <img src="https://picsum.photos/40/40" alt="avatar-img">
+                <img src="${avatarImg}" alt="avatar-img">
                 <div class="ms-2 d-flex flex-column name-info">
-                    <small>nino oxxo</small>
+                    <small>${user}</small>
                     <small>${formatDate}</small>
                 </div>
             </div>
@@ -61,7 +57,7 @@ const insertPostData = async (title, tags, coverImg, user, date, minRead,singleP
             <small class="card-text p-hashtags">${arrTags}</small>
             <div class="d-flex justify-content-end align-items-center">
                 <small class="">5 min read</small>
-                <button type="button" class="btn btn-secondary mx-1">save</button>
+                <button type="button" class="btn btn-light mx-1">save</button>
             </div>
         </div>  
         </li>       
@@ -72,28 +68,19 @@ const insertPostData = async (title, tags, coverImg, user, date, minRead,singleP
     }
 }
 
-const insertVariousPostData = async (title, tags, user, date, minRead,singlePostHash) => {
+const insertVariousPostData = async (title, tags, user, date, avatarImg,singlePostHash) => {
     try {
-
-        function getDate() {
-            let yourDate = new Date()
-            const offset = yourDate.getTimezoneOffset()
-            yourDate = new Date(yourDate.getTime() - (offset*60*1000))
-            return yourDate.toISOString()
-        }
-
-        let formatDate =  getDate()
+        let formatDate =  date.substring(0,10)
         let arrTags =''
-
         tags.split(',').forEach(tag => arrTags += '#' + tag + ' ')
 
         let data = ` 
         <li class="card my-3">
         <div class="card-body">
             <div class="d-flex avatar-info">
-                <img src="https://picsum.photos/40/40" alt="avatar-img">
+                <img src="${avatarImg}" alt="avatar-img">
                 <div class="ms-2 d-flex flex-column name-info">
-                    <small>nino oxxo</small>
+                    <small>${user}</small>
                     <small>${formatDate}</small>
                 </div>
             </div>
@@ -112,13 +99,8 @@ const insertVariousPostData = async (title, tags, user, date, minRead,singlePost
     }
 }
 
-
-
-
-
 // ? ///////////////////////////////////////////////////////////////////////////
 
-    // ?/////////////
     const getAllPost = async () => {
         try {
             await fetch ('https://desafio-js-54653-default-rtdb.firebaseio.com/posts/.json'
