@@ -667,8 +667,16 @@ img.img-circle {
 
 .myCentralSec .page-content {
   background: #fff;
-  padding: 25px 0;
+  padding: 0;
   border: none;
+}
+
+.myCentralSec .page-content img {
+  width: 100%;
+}
+
+.myCentralSec .page-content ol, .myCentralSec .page-content ul {
+  padding-left: 5%;
 }
 
 .myCentralSec .placeholder-content {
