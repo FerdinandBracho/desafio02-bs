@@ -36,7 +36,7 @@ btn.addEventListener('click', () => {
 
 const insertPostData = async (title, tags, coverImg, user, date, avatarImg ,singlePostHash) => {
     try {
-        console.log(avatarImg)
+        console.log(singlePostHash)
 
         let formatDate =  date.substring(0,10)
         let arrTags =''
@@ -70,6 +70,7 @@ const insertPostData = async (title, tags, coverImg, user, date, avatarImg ,sing
 
 const insertVariousPostData = async (title, tags, user, date, avatarImg ,singlePostHash) => {
     try {
+        console.log(singlePostHash)
         let formatDate =  date.substring(0,10)
         let arrTags =''
         tags.split(',').forEach(tag => arrTags += '#' + tag + ' ')
@@ -112,16 +113,19 @@ const insertVariousPostData = async (title, tags, user, date, avatarImg ,singleP
                 arrPost.reverse()
                 
                 let firstPost = arrPost.shift()
+                console.log(firstPost)
                 let postHash = firstPost[0]
+                console.log(postHash)
                 let {title, tags, coverImg, user, date, minRead, avatarImg} = firstPost[1]
-                insertPostData(title, tags, coverImg, user, date, avatarImg, minRead,postHash)
+                insertPostData(title, tags, coverImg, user, date, avatarImg, postHash)
                 
                 
                 
                 arrPost.forEach(item => {
                     let postsHash = item[0]
+                    console.log(postsHash)
                     let {title, tags, user, date, minRead, avatarImg} = item[1]
-                    insertVariousPostData(title, tags,user, date,avatarImg ,minRead, postsHash)
+                    insertVariousPostData(title, tags,user, date,avatarImg ,postsHash)
                 })
 
             })
