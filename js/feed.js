@@ -1,14 +1,13 @@
-// ? ///////////////////////////////////////////////////
-//Math.round(cardPost.innerText.length * (0.1/60)) + " min"
+// !Declaracion de funcion para insercion de data en "Main Post"
 
 const insertPostData = (title, tags, coverImg, user, date, avatarImg, singlePostHash) => {
     try {
-        console.log(singlePostHash)
-
+        // !Manipulacion de propiedades para presentarlas de la forma requerida
         let formatDate = date.substring(0, 10)
         let arrTags = ''
         tags.split(',').forEach(tag => arrTags += '#' + tag + ' ')
 
+        // !Creacion de elemtos a insertar en html 
         let data = ` 
         <li class="card my-3">
         <img src="${coverImg}" class="card-img-top" alt="post-img">
@@ -29,19 +28,22 @@ const insertPostData = (title, tags, coverImg, user, date, avatarImg, singlePost
         </div>  
         </li>       
         `
+        // !Insercion de HTML en elemento seleccionado
         document.querySelector('.posts-ul').innerHTML += data
     } catch (error) {
         console.log(error)
     }
 }
 
+// !Declaracion de funciones para insercion de data en "various Post"
 const insertVariousPostData = (title, tags, user, date, avatarImg, singlePostHash) => {
     try {
-        console.log(singlePostHash)
+        // !Manipulacion de propiedades para presentarlas de la forma requerida
         let formatDate = date.substring(0, 10)
         let arrTags = ''
         tags.split(',').forEach(tag => arrTags += '#' + tag + ' ')
 
+        // !Creacion de elemtos a insertar en html 
         let data = ` 
         <li class="card my-3">
         <div class="card-body">
@@ -61,44 +63,40 @@ const insertVariousPostData = (title, tags, user, date, avatarImg, singlePostHas
         </div>  
         </li>       
         `
+        // !Insercion de HTML en elemento seleccionado
         document.querySelector('.posts-ul').innerHTML += data
     } catch (error) {
         console.log(error)
     }
 }
 
-// ? ///////////////////////////////////////////////////////////////////////////
-
+// !Declaracion de funcion asincrona para el request a la coleccion de post en base de datos
 const getAllPost = async() => {
     try {
         await fetch('https://desafio-js-54653-default-rtdb.firebaseio.com/posts/.json').then(res => {
             return res.json()
         }).then(response => {
-            console.log(response)
-            arrPost = Object.entries(response)
-            arrPost.reverse()
 
+            // !Manipulacion de response para adaptarla a las necesidaes 
+            arrPost = Object.entries(response).reverse()
             let firstPost = arrPost.shift()
-            console.log(firstPost)
             let postHash = firstPost[0]
-            console.log(postHash)
-            let { title, tags, coverImg, user, date, minRead, avatarImg } = firstPost[1]
+            let { title, tags, coverImg, user, date, avatarImg } = firstPost[1]
+
+            // !Invocacion de funcion para insertar/pintar datos de Main Post
             insertPostData(title, tags, coverImg, user, date, avatarImg, postHash)
 
-
-
+            // !Invocacion de funcion para insertar/Pintar datos de Various Post 
             arrPost.forEach(item => {
                 let postsHash = item[0]
-                console.log(postsHash)
-                let { title, tags, user, date, minRead, avatarImg } = item[1]
+                let { title, tags, user, date, avatarImg } = item[1]
                 insertVariousPostData(title, tags, user, date, avatarImg, postsHash)
-            })
 
-        })
-    } catch (error) {
-        console.log(error)
-    }
-
+            })})
+        } catch (error) {
+            console.log(error)
+        }
 }
 
+// !Ejecucion de funcion para pintar Posts organizados en la pagina principial 
 getAllPost()
